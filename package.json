@@ -4,16 +4,28 @@
   "description": "Delilah Clement Portfolio",
   "main": "index.js",
   "dependencies": {
+    "@zeit/next-sass": "^1.0.1",
+    "bootstrap": "^4.3.1",
     "next": "^9.1.1",
+    "next-compose-plugins": "^2.2.0",
+    "node-sass": "^4.13.0",
     "react": "^16.11.0",
     "react-dom": "^16.11.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "autoprefixer": "^9.7.0",
+    "cssnano": "^4.1.10",
+    "file-loader": "^4.2.0",
+    "postcss-nested": "^4.1.2",
+    "postcss-uncss": "^0.17.0",
+    "stylelint-webpack-plugin": "^1.0.3",
+    "uncss": "^0.17.2"
+  },
   "scripts": {
-    "dev": "next",
-    "build": "next build",
-    "start": "next start",
-    "export": "npm run build && next export"
+    "dev": "ENV=development next",
+    "build": "ENV=production next build",
+    "start": "ENV=production next start",
+    "export": "ENV=production npm run build && next export"
   },
   "repository": {
     "type": "git",
