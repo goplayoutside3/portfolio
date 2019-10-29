@@ -4,9 +4,11 @@ import Layout from '../components/Layout'
 import '../styles/styles.scss'
 
 const Homepage = () => (
-    <Layout description={'Homepage'}>
-      <h1 className="test">Welcome!</h1>
-    </Layout>
-  )
-  
-  export default Homepage;
+  <Layout description={'Homepage'}>
+    <section className="container">
+      <h1>Welcome!</h1>
+    </section>
+  </Layout>
+)
+
+export default Homepage

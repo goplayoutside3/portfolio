@@ -1,0 +1,26 @@
+header {
+    width: 100vw;
+    height: 100px;
+    display: flex;
+
+    .icon {
+        height: 80px;
+        margin: auto 20px;
+    }
+
+    li {
+        list-style: none;
+        margin: auto 20px;
+        font-family: $rw-bold;
+    }
+
+    a {
+        color: black;
+        transition: color 200ms ease-out;
+
+        &:hover {
+            text-decoration: none;
+            color: gray;
+        }
+    }
+}
