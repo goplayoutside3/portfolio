@@ -1,20 +1,18 @@
 const withSass = require('@zeit/next-sass')
-const withPlugins = require('next-compose-plugins')
 
-const nextConfig = {
-    env: {
-        MICROSITE_PATH: '',
-        SITE_URL: '',
-    },
-}
-
-module.exports = withPlugins([
-    [ withSass, {
-        sassLoaderOptions: {
-            sourceMap: true
-        },
-        postcssLoaderOptions: {
-            sourceMap: true
+module.exports = withSass({
+    target: 'serverless',
+    webpack(config, options) {
+      config.module.rules.push({
+        test: /\.(png|jpg|gif|svg|eot|ttf|woff|woff2)$/,
+        use: {
+          loader: 'url-loader',
+          options: {
+            limit: 100000
+          }
         }
-    }],
-], nextConfig)
+      })
+  
+      return config
+    }
+  })
