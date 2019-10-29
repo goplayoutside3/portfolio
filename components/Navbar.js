@@ -3,6 +3,7 @@ import Link from 'next/link'
 
 const Navbar = () => (
   <ul className="menu">
+    <img src="/images/longboard.svg" height="200px" />
     <li>
       <Link href="/">
         <a>Home</a>
@@ -14,6 +15,6 @@ const Navbar = () => (
       </Link>
     </li>
   </ul>
-);
+)
 
 export default Navbar
