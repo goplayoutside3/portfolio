@@ -5,8 +5,11 @@ import '../styles/styles.scss'
 
 const Homepage = () => (
   <Layout description={'Homepage'}>
-    <section className="container">
-      <h1>Welcome!</h1>
+    <section className="container hero">
+      <h1>Under Construction
+        {/* <span>hello, i'm Delilah Clement,</span>
+        <span>a full-stack web developer</span> */}
+      </h1>
     </section>
   </Layout>
 )

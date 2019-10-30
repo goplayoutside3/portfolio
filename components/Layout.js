@@ -1,5 +1,9 @@
 import Navbar from './Navbar'
+import ErrorBoundary from './Error'
 import Head from 'next/head'
+
+const siteURL = ''
+// const siteUrl = 'https://www.delilahclement.dev'
 
 const Layout = ({ children, title = 'Delilah Clement', description }) => (
   <div>
@@ -10,7 +14,10 @@ const Layout = ({ children, title = 'Delilah Clement', description }) => (
 
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
       <meta name="description" content={`${description} | ${title}`} />
-      <meta name="keywords" content={`delilah clement portfolio web developer`} />
+      <meta
+        name="keywords"
+        content={`delilah clement portfolio web developer`}
+      />
 
       <meta property="og:title" content={`${description} | ${title}`} />
       <meta property="og:type" content="article" />
@@ -20,8 +27,11 @@ const Layout = ({ children, title = 'Delilah Clement', description }) => (
       <meta property="og:site_name" content={title} />
     </Head>
 
-    <Navbar />
-    {children}
+    <ErrorBoundary>
+      <Navbar />
+      {children}
+      <footer className="container">© 2019 Delilah Clement. All rights reserved.</footer>
+    </ErrorBoundary>
   </div>
 )
 

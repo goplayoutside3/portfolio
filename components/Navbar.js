@@ -10,11 +10,16 @@ const Navbar = () => (
         </Link>
       </li>
       <li>
-        <Link href="/moodboard">
-          <a>Moodboard</a>
+        <Link href="/work">
+          <a>Work</a>
+        </Link>
+      </li>
+      <li>
+        <Link href="/community">
+          <a>Community</a>
         </Link>
       </li>
   </header>
 )
-
+// Add Github, LinkedIn, Email
 export default Navbar
