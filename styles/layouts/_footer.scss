@@ -1,6 +1,9 @@
 footer {
     width: 100vw;
-    height: 50px;
+    height: 30px;
     font-family: $rw-thin;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
