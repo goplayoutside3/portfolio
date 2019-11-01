@@ -5,12 +5,14 @@ import '../styles/styles.scss'
 
 const Homepage = () => (
   <Layout description={'Homepage'}>
-    <section className="container hero">
-      <h1>Under Construction
-        {/* <span>hello, i'm Delilah Clement,</span>
-        <span>a full-stack web developer</span> */}
-      </h1>
-    </section>
+    <main className="home">
+      <section className="container hero">
+        <h1>
+          <span className="name">I'm Delilah</span>
+          <span>a front-end web developer</span>
+        </h1>
+      </section>
+    </main>
   </Layout>
 )
 
