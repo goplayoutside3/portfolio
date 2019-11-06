@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import fetch from 'isomorphic-unfetch'
 
 const BusTracker = () => {
@@ -14,10 +14,6 @@ const BusTracker = () => {
   const dirSelect = useRef(null)
   const stopSelect = useRef(null)
 
-  const updateRoute = () => setRoute(routeSelect.current.value)
-  const updateDirection = () => setDirection(dirSelect.current.value)
-  const updateStop = () => setStop(stopSelect.current.value)
-
   const getAllRoutes = async () => {
     try {
       const response = await fetch('api/cta')
@@ -28,9 +24,28 @@ const BusTracker = () => {
     }
   }
 
-  const getDirections = async () => {
+  useEffect(() => {
+    getAllRoutes()
+  }, [])
+
+  const updateRoute = () => {
+    setRoute(routeSelect.current.value)
+    getDirections(routeSelect.current.value)
+  }
+
+  const updateDirection = () => {
+    setDirection(dirSelect.current.value)
+    getAllStops()
+  }
+
+  const updateStop = () => {
+    setStop(stopSelect.current.value)
+    getArrivals()
+  }
+
+  const getDirections = async (newRoute) => {
     try {
-      const response = await fetch('api/directions', { direction })
+      const response = await fetch('api/directions', { newRoute })
       const directions = await response.json()
       loadAllDirections(directions)
     } catch (error) {
@@ -60,10 +75,7 @@ const BusTracker = () => {
 
   return (
     <div>
-      <button onClick={getAllRoutes}>Load</button>
-      <button onClick={getDirections}>Load</button>
-      <button onClick={getAllStops}>Load</button>
-      <button onClick={getArrivals}>Load</button>
+      {/* <button onClick={getAllRoutes}>Load</button> */}
 
       <select value={route} onChange={updateRoute} ref={routeSelect}>
         <option>Select Route</option>
@@ -94,6 +106,15 @@ const BusTracker = () => {
             </option>
           ))}
       </select>
+
+      <ul>
+        {allArrivals &&
+          allArrivals.map(arr => (
+            <li key={arr.vid}>
+              {arr.des} {arr.prdctdn}min
+            </li>
+          ))}
+      </ul>
     </div>
   )
 }

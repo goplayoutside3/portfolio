@@ -4,6 +4,7 @@ const busBaseURL = 'http://www.ctabustracker.com/bustime/api/v2/get'
 const BUS_API_KEY = '98mAGfBFieuxt8Hsj7an9c52u'
 
 module.exports = async (req, res) => {
+    console.log(req.body)
     const route = '8'
   try {
     const response = await fetch(
