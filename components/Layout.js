@@ -2,8 +2,8 @@ import Navbar from './Navbar'
 import ErrorBoundary from './Error'
 import Head from 'next/head'
 
-// const siteUrl = ''
-const siteUrl = 'https://www.delilahclement.dev'
+const siteUrl = ''
+// const siteUrl = 'https://www.delilahclement.dev'
 
 const Layout = ({ children, title = 'Delilah Clement', description }) => (
   <div>

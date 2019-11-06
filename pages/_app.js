@@ -1,7 +1,6 @@
 import React from 'react'
 import App from 'next/app'
 import Layout from '../components/Layout'
-import Navbar from '../components/Layout'
 import { PageTransition } from 'next-page-transitions'
 
 import '../styles/styles.scss'

@@ -1,43 +1,62 @@
 import React, { useState } from 'react'
 import fetch from 'isomorphic-unfetch'
-import { request } from 'http'
 
 const BusTracker = () => {
-  const [route, updateRoute] = useState(null)
   const [allRoutes, loadAllRoutes] = useState(null)
+  const [route, updateRoute] = useState(null)
+  const [allDirections, loadAllDirections] = useState(null)
   const [direction, updateDirection] = useState(null)
+  const [allStops, loadAllStops] = useState(null)
   const [stopId, updateStopId] = useState(null)
+  const [allArrivals, loadArrivals] = useState(null)
   const [stopName, updateStopName] = useState(null)
 
-  const busBaseURL = 'http://www.ctabustracker.com/bustime/api/v2/get'
-  const BUS_API_KEY = '98mAGfBFieuxt8Hsj7an9c52u'
-
   const getAllRoutes = async () => {
-      try {
-          const response = await fetch(`${busBaseURL}routes?key=${BUS_API_KEY}&format=json`, {
-            mode: 'no-cors',
-          })
-          console.log(response)
-      } catch (error) {
-          console.log(error)
-      }
+    try {
+      const response = await fetch('api/cta')
+      const routes = await response.json()
+      loadAllRoutes(routes)
+    } catch (error) {
+      console.log('Something went wrong')
+    }
   }
 
-  const getDirections = () => {
-    const response = ''`${busBaseURL}directions?key=${BUS_API_KEY}&rt=${route}&format=json`
+  const getDirections = async () => {
+    try {
+      const response = await fetch('api/directions', route)
+      const directions = await response.json()
+      loadAllDirections(directions)
+    } catch (error) {
+      console.log('Something went wrong')
+    }
   }
 
-  const getAllStops = () => {
-    const response = ''`${busBaseURL}stops?key=${BUS_API_KEY}&rt=${route}&dir=${direction}&format=json`
+  const getAllStops = async () => {
+    try {
+      const response = await fetch('api/stops', {route, direction})
+      const stops = await response.json()
+      loadAllStops(stops)
+    } catch (error) {
+      console.log('Something went wrong')
+    }
   }
 
-  const getArrivals = () => {
-    const response = ''`${busBaseURL}predictions?key=${BUS_API_KEY}&stpid=${stopId}&format=json`
+  const getArrivals = async () => {
+    try {
+      const response = await fetch('api/arrivals', stopId)
+      const arrivals = await response.json()
+      loadArrivals(arrivals)
+    } catch (error) {
+      console.log('Something went wrong')
+    }
   }
 
   return (
     <div>
       <button onClick={getAllRoutes}>Load</button>
+      <button onClick={getDirections}>Load</button>
+      <button onClick={getAllStops}>Load</button>
+      <button onClick={getArrivals}>Load</button>
       {route && <p>{`Route: #${route}`}</p>}
       <select>Routes</select>
       {direction && <p>{`Direction: ${direction}`}</p>}
