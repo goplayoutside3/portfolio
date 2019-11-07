@@ -9,8 +9,8 @@ const Layout = ({ children, title = 'Delilah Clement', description }) => (
   <div>
     <Head>
       <title>{title}</title>
-      <link rel="shortcut icon" href={`${siteUrl}/images/longboard.svg`} />
-      <link rel="icon" href={`${siteUrl}/images/longboard.svg`} />
+      <link rel="shortcut icon" href={`/public/images/longboard.svg`} />
+      <link rel="icon" href={`/public/images/longboard.svg`} />
 
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
       <meta name="description" content={`${description} | ${title}`} />
@@ -27,8 +27,8 @@ const Layout = ({ children, title = 'Delilah Clement', description }) => (
       <meta property="og:site_name" content={title} />
     </Head>
 
-    <ErrorBoundary>
       <Navbar />
+    <ErrorBoundary>
       {children}
       <footer className="container">© 2019 Delilah Clement. All rights reserved.</footer>
     </ErrorBoundary>

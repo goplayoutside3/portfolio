@@ -35,17 +35,20 @@ const BusTracker = () => {
 
   const updateDirection = () => {
     setDirection(dirSelect.current.value)
-    getAllStops()
+    getAllStops(dirSelect.current.value)
   }
 
   const updateStop = () => {
     setStop(stopSelect.current.value)
-    getArrivals()
+    getArrivals(stopSelect.current.value)
   }
 
-  const getDirections = async (newRoute) => {
+  const getDirections = async newRoute => {
     try {
-      const response = await fetch('api/directions', { newRoute })
+      const response = await fetch('api/directions', {
+        method: 'POST',
+        body: JSON.stringify({ newRoute }),
+      })
       const directions = await response.json()
       loadAllDirections(directions)
     } catch (error) {
@@ -53,9 +56,12 @@ const BusTracker = () => {
     }
   }
 
-  const getAllStops = async () => {
+  const getAllStops = async (newDir) => {
     try {
-      const response = await fetch('api/stops', { route, direction })
+      const response = await fetch('api/stops', { 
+        method: 'POST',
+        body: JSON.stringify({ route, newDir })
+      })
       const stops = await response.json()
       loadAllStops(stops)
     } catch (error) {
@@ -63,9 +69,12 @@ const BusTracker = () => {
     }
   }
 
-  const getArrivals = async () => {
+  const getArrivals = async (selectedStop) => {
     try {
-      const response = await fetch('api/arrivals', { stopId })
+      const response = await fetch('api/arrivals', {
+        method: 'POST',
+        body: JSON.stringify({ selectedStop })
+      })
       const arrivals = await response.json()
       loadArrivals(arrivals)
     } catch (error) {
@@ -75,8 +84,6 @@ const BusTracker = () => {
 
   return (
     <div>
-      {/* <button onClick={getAllRoutes}>Load</button> */}
-
       <select value={route} onChange={updateRoute} ref={routeSelect}>
         <option>Select Route</option>
         {allRoutes &&
