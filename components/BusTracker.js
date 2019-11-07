@@ -30,11 +30,16 @@ const BusTracker = () => {
 
   const updateRoute = () => {
     setRoute(routeSelect.current.value)
+    setDirection('')
+    setStop('')
+    if (allArrivals) loadArrivals(null)
     getDirections(routeSelect.current.value)
   }
 
   const updateDirection = () => {
     setDirection(dirSelect.current.value)
+    setStop('')
+    if (allArrivals) loadArrivals(null)
     getAllStops(dirSelect.current.value)
   }
 
