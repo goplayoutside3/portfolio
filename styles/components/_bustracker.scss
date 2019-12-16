@@ -1,0 +1,14 @@
+.selects-cont {
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-evenly;
+
+  .dropdown {
+    background: transparent;
+    border: none;
+    font-family: $rw-reg;
+    // -webkit-appearance: none; // hide default arrows
+  }
+}

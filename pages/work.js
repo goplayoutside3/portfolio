@@ -3,10 +3,10 @@ import BusTracker from '../components/BusTracker'
 
 const Work = () => (
     <main className="work">
-      <section className="container hero">
+      {/* <section className="container hero">
         <h1>Under Construction</h1>
-      </section>
-      <section>
+      </section> */}
+      <section className="transit">
         <BusTracker />
       </section>
     </main>

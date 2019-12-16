@@ -88,8 +88,8 @@ const BusTracker = () => {
   }
 
   return (
-    <div>
-      <select value={route} onChange={updateRoute} ref={routeSelect}>
+    <div className="selects-cont">
+      <select value={route} onChange={updateRoute} ref={routeSelect} className="dropdown">
         <option>Select Route</option>
         {allRoutes &&
           allRoutes.map(rt => (
@@ -99,7 +99,7 @@ const BusTracker = () => {
           ))}
       </select>
 
-      <select value={direction} onChange={updateDirection} ref={dirSelect}>
+      <select value={direction} onChange={updateDirection} ref={dirSelect} className="dropdown">
         <option>Select Direction</option>
         {allDirections &&
           allDirections.map(dir => (
@@ -109,7 +109,7 @@ const BusTracker = () => {
           ))}
       </select>
 
-      <select value={stopId} onChange={updateStop} ref={stopSelect}>
+      <select value={stopId} onChange={updateStop} ref={stopSelect} className="dropdown">
         <option>Select Stop</option>
         {allStops &&
           allStops.map(stop => (
@@ -123,7 +123,8 @@ const BusTracker = () => {
         {allArrivals &&
           allArrivals.map(arr => (
             <li key={arr.vid}>
-              {arr.des} {arr.prdctdn}min
+              {arr.des} 
+              {arr.prdctdn === 'DUE' ? 'DUE' : `${arr.prdctdn}min`}
             </li>
           ))}
       </ul>
