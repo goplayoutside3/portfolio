@@ -27,7 +27,11 @@ header {
 
         &:hover {
             text-decoration: none;
-            color: gray;
+            color: white;
+
+            @include media-breakpoint-up(md) {
+                color: #bfdff1;
+            }
         }
     }
 }
