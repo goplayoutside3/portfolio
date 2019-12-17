@@ -1,15 +1,22 @@
 .home {
-    background-image: linear-gradient(to top, #dffcd2 0%, white 100%);
-
     .hero {
         text-align: center;
         display: flex;
-        align-items: center;
         justify-content: center;
+        position: relative;
+    }
+
+    .hero-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
     }
 
     h1 {
         font-family: $rw-thin;
+        position: relative;
 
         span {
             display: block;

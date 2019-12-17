@@ -3,7 +3,6 @@ import Link from 'next/link'
 
 const Navbar = () => (
   <header>
-      <img src="/images/longboard.svg" className="icon" />
       <li>
         <Link href="/">
           <a>Home</a>
@@ -21,5 +20,5 @@ const Navbar = () => (
       </li>
   </header>
 )
-// Add Github, LinkedIn, Email
+// Add Github, LinkedIn, Codepen
 export default Navbar
