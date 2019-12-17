@@ -4,12 +4,21 @@ header {
     width: 100%;
     height: 80px;
     display: flex;
+    justify-content: space-evenly;
     background: $sky-blue;
+
+    @include media-breakpoint-up(md) {
+        justify-content: flex-start;
+    }
 
     li {
         list-style: none;
-        margin: auto 0 auto 30px;
+        margin: auto 0;
         font-family: $rw-bold;
+
+        @include media-breakpoint-up(md) {
+            margin: auto 0 auto 30px;
+        }
     }
 
     a {
