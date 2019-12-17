@@ -4,6 +4,7 @@
         position: relative;
         background: $sky-blue;
         overflow: hidden;
+        width: 100%;
     }
 
     .hero-bg {
@@ -42,7 +43,12 @@
         }
         
         p {
-            font-size: 2rem;
+            font-size: 1.5rem;
+            line-height: 1;
+
+            @include media-breakpoint-up(md) {
+                font-size: 2rem;
+            }
         }
     }
 }

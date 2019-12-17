@@ -10,7 +10,7 @@ const Layout = ({ children, title = 'Delilah Clement', description }) => (
     <Head>
       <title>{title}</title>
       <link rel="shortcut icon" href={`/public/images/longboard.svg`} />
-      <link rel="icon" href={`/public/images/longboard.svg`} />
+      <link rel="icon" href='' />
 
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
       <meta name="description" content={`${description} | ${title}`} />
