@@ -17,5 +17,11 @@
 
     .transit {
         height: 400px;
+
+        h2 {
+            font-size: 2rem;
+            color: white;
+            font-family: $rw-reg;
+        }
     }
 }

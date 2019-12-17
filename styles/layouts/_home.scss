@@ -5,6 +5,11 @@
         background: $sky-blue;
         overflow: hidden;
         width: 100%;
+        min-height: 400px;
+
+        @include media-breakpoint-up(md) {
+            min-height: 500px;
+        }
     }
 
     .hero-bg {
@@ -34,7 +39,7 @@
 
     .hero-copy {
         position: relative;
-        top: 13%;
+        top: 10vh;
         font-family: $rw-thin;
         color: white;
 

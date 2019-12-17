@@ -61,11 +61,11 @@ const BusTracker = () => {
     }
   }
 
-  const getAllStops = async (newDir) => {
+  const getAllStops = async newDir => {
     try {
-      const response = await fetch('api/stops', { 
+      const response = await fetch('api/stops', {
         method: 'POST',
-        body: JSON.stringify({ route, newDir })
+        body: JSON.stringify({ route, newDir }),
       })
       const stops = await response.json()
       loadAllStops(stops)
@@ -74,11 +74,11 @@ const BusTracker = () => {
     }
   }
 
-  const getArrivals = async (selectedStop) => {
+  const getArrivals = async selectedStop => {
     try {
       const response = await fetch('api/arrivals', {
         method: 'POST',
-        body: JSON.stringify({ selectedStop })
+        body: JSON.stringify({ selectedStop }),
       })
       const arrivals = await response.json()
       loadArrivals(arrivals)
@@ -88,47 +88,76 @@ const BusTracker = () => {
   }
 
   return (
-    <div className="selects-cont">
-      <select value={route} onChange={updateRoute} ref={routeSelect} className="dropdown">
-        <option>Select Route</option>
-        {allRoutes &&
-          allRoutes.map(rt => (
-            <option value={rt.rt} key={rt.rt}>
-              {rt.rt}
-            </option>
-          ))}
-      </select>
+    <>
+      <div className="selects-cont">
+        <div className="select-wrap">
+          <img className="down" src="/images/down.svg" alt="down arrow" />
+          <select
+            value={route}
+            onChange={updateRoute}
+            ref={routeSelect}
+            className="dropdown"
+            tabIndex="0"
+          >
+            <option>Select Route</option>
+            {allRoutes &&
+              allRoutes.map(rt => (
+                <option value={rt.rt} key={rt.rt}>
+                  {rt.rt}
+                </option>
+              ))}
+          </select>
+        </div>
 
-      <select value={direction} onChange={updateDirection} ref={dirSelect} className="dropdown">
-        <option>Select Direction</option>
-        {allDirections &&
-          allDirections.map(dir => (
-            <option value={dir.dir} key={dir.dir}>
-              {dir.dir}
-            </option>
-          ))}
-      </select>
+        <div className="select-wrap">
+          <img className="down" src="/images/down.svg" alt="down arrow" />
+          <select
+            value={direction}
+            onChange={updateDirection}
+            ref={dirSelect}
+            className="dropdown"
+            tabIndex="0"
+          >
+            <option>Select Direction</option>
+            {allDirections &&
+              allDirections.map(dir => (
+                <option value={dir.dir} key={dir.dir}>
+                  {dir.dir}
+                </option>
+              ))}
+          </select>
+        </div>
 
-      <select value={stopId} onChange={updateStop} ref={stopSelect} className="dropdown">
-        <option>Select Stop</option>
-        {allStops &&
-          allStops.map(stop => (
-            <option value={stop.stpid} key={stop.stpid}>
-              {stop.stpnm}
-            </option>
-          ))}
-      </select>
+        <div className="select-wrap">
+          <img className="down" src="/images/down.svg" alt="down arrow" />
+          <select
+            value={stopId}
+            onChange={updateStop}
+            ref={stopSelect}
+            className="dropdown"
+            tabIndex="0"
+          >
+            <option>Select Stop</option>
+            {allStops &&
+              allStops.map(stop => (
+                <option value={stop.stpid} key={stop.stpid}>
+                  {stop.stpnm}
+                </option>
+              ))}
+          </select>
+        </div>
+      </div>
 
-      <ul>
+      <ul className="arrivals">
         {allArrivals &&
           allArrivals.map(arr => (
             <li key={arr.vid}>
-              {arr.des} 
+              {arr.des}
               {arr.prdctdn === 'DUE' ? 'DUE' : `${arr.prdctdn}min`}
             </li>
           ))}
       </ul>
-    </div>
+    </>
   )
 }
 
