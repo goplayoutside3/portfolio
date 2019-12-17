@@ -2,7 +2,7 @@
     .hero {
         text-align: center;
         position: relative;
-        background: #5f879c;
+        background: $sky-blue;
         overflow: hidden;
     }
 
@@ -16,7 +16,7 @@
 
     .hero-copy {
         position: relative;
-        top: 10%;
+        top: 13%;
         font-family: $rw-thin;
         color: white;
 

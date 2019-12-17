@@ -2,23 +2,18 @@ header {
     position: relative;
     z-index: 999;
     width: 100%;
-    height: 100px;
+    height: 80px;
     display: flex;
-    justify-content: center;
-
-    .icon {
-        height: 80px;
-        margin: auto 20px;
-    }
+    background: $sky-blue;
 
     li {
         list-style: none;
-        margin: auto 20px;
+        margin: auto 0 auto 30px;
         font-family: $rw-bold;
     }
 
     a {
-        color: black;
+        color: white;
         transition: color 200ms ease-out;
 
         &:hover {
