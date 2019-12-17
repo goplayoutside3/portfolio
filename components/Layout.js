@@ -8,17 +8,16 @@ const Layout = ({ children, title = 'Delilah Clement', description = '' }) => (
       <title>{title}</title>
 
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-      <meta name="description" content={`${description} | ${title}`} />
       <meta
         name="keywords"
         content={`delilah clement portfolio web developer`}
       />
 
-      <meta property="og:title" content={`${description} | ${title}`} />
+      <meta property="og:title" content={title} />
       <meta property="og:type" content="article" />
       <meta property="og:url" content={''} />
       <meta property="og:image" content={''} />
-      <meta property="og:description" content={`${description} | ${title}`} />
+      <meta name="description" content={description} />
       <meta property="og:site_name" content={title} />
     </Head>
 
