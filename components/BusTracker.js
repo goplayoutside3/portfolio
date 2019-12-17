@@ -89,6 +89,7 @@ const BusTracker = () => {
 
   return (
     <>
+    <h3>Chicago Transit Bus Tracker</h3>
       <div className="selects-cont">
         <div className="select-wrap">
           <img className="down" src="/images/down.svg" alt="down arrow" />
@@ -150,10 +151,10 @@ const BusTracker = () => {
 
       <ul className="arrivals">
         {allArrivals &&
-          allArrivals.map(arr => (
+          allArrivals.slice(0, 5).map(arr => (
             <li key={arr.vid}>
-              {arr.des}
-              {arr.prdctdn === 'DUE' ? 'DUE' : `${arr.prdctdn}min`}
+              <span>{arr.des}</span>
+              <span className="eta">{arr.prdctdn === 'DUE' ? 'DUE' : `${arr.prdctdn}min`}</span>
             </li>
           ))}
       </ul>

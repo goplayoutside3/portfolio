@@ -16,12 +16,15 @@
     }
 
     .transit {
-        height: 400px;
+        padding: 30px;
+        height: calc(100vh - 80px);
+        border-top: 2px solid $light-blue;
 
         h2 {
-            font-size: 2rem;
+            font-size: 2.5rem;
             color: white;
             font-family: $rw-reg;
+            margin-bottom: 15px;
         }
     }
 }
