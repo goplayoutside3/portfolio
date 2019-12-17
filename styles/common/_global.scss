@@ -37,3 +37,12 @@ body {
 	opacity: 0;
 	transition: opacity 300ms;
 }
+
+.hero {
+	width: 100%;
+	height: calc(90vh - 80px);
+
+	@include media-breakpoint-up(md) {
+		height: calc(100vh - 80px);
+	}
+}
