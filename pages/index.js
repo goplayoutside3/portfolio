@@ -1,3 +1,5 @@
+import { Toolbox } from '../components'
+
 const Homepage = () => {
   return (
     <main className="home">
@@ -9,6 +11,7 @@ const Homepage = () => {
           <p>a front-end web developer</p>
         </div>
       </section>
+      <Toolbox />
     </main>
   )
 }
