@@ -14,7 +14,8 @@ header {
     li {
         list-style: none;
         margin: auto 0;
-        font-family: $rw-bold;
+        font-family: $tt-reg;
+        letter-spacing: 2px;
 
         @include media-breakpoint-up(md) {
             margin: auto 0 auto 30px;

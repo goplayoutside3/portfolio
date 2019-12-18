@@ -11,7 +11,7 @@ const Homepage = () => {
           <p>a front-end web developer</p>
         </div>
       </section>
-      {/* <Toolbox /> */}
+      <Toolbox />
     </main>
   )
 }

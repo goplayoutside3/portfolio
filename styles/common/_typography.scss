@@ -16,3 +16,29 @@
 $rw-thin: 'Raleway-Thin', sans-serif;
 $rw-reg: 'Raleway-Regular', sans-serif;
 $rw-bold: 'Raleway-Bold', sans-serif;
+
+@font-face {
+    font-family: 'Titillium-Light';
+    src: url('/fonts/Titillium-Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Titillium-Regular';
+    src: url('/fonts/Titillium-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Titillium-SemiBold';
+    src: url('/fonts/Titillium-SemiBold.ttf') format('truetype');
+}
+
+$tt-light: 'Titillium-Light', sans-serif;
+$tt-reg: 'Titillium-Regular', sans-serif;
+$tt-bold: 'Titillium-SemiBold', sans-serif;
+
+@font-face {
+    font-family: 'Solway-Light';
+    src: url('/fonts/Solway-Light.ttf') format('truetype');
+}
+
+$solway: 'Solway-Light';
