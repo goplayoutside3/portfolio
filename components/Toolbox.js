@@ -7,6 +7,10 @@ const Toolbox = () => {
           <img className="tool" src="/images/wrench.svg" alt="Wrench" />
           <p className="label git">Git</p>
         </div>
+        <div className="tool-cont screwdriver">
+          <img className="tool" src="/images/screwdriver.svg" alt="Screwdriver" />
+          <p className="label firebase">Firebase</p>
+        </div>
         <div className="tool-cont hammer">
           <img className="tool" src="/images/hammer.svg" alt="Hammer" />
           <p className="label javascript">Javascript</p>
