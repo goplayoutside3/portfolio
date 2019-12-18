@@ -3,6 +3,10 @@ const Toolbox = () => {
     <section className="toolbox">
       <div className="box-cont">
         <img className="box back" src="/images/box-back.svg" alt="" />
+        <div className="tool-cont wrench">
+          <img className="tool" src="/images/wrench.svg" alt="Wrench" />
+          <p className="label git">Git</p>
+        </div>
         <div className="tool-cont hammer">
           <img className="tool" src="/images/hammer.svg" alt="Hammer" />
           <p className="label javascript">Javascript</p>
