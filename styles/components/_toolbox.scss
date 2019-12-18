@@ -1,11 +1,18 @@
 .toolbox {
-  min-height: 100vh;
   background: $sand;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .box-cont {
-  padding: 20vw;
   position: relative;
+  width: 100%;
+  padding: 20vw;
+
+  @include media-breakpoint-up(md) {
+    width: 50%;
+    padding: 10vw;
+  }
 }
 
 .box {
@@ -26,6 +33,11 @@
   color: white;
   font-size: 4vw;
   font-family: $rw-reg;
+
+  @include media-breakpoint-up(md) {
+    font-size: 3vw;
+    top: 56%;
+  }
 }
 
 .tool-cont {
@@ -41,8 +53,12 @@
 .label {
   position: absolute;
   color: white;
-  font-family: $rw-thin;
+  font-family: $rw-reg;
   font-size: 3vw;
+
+  @include media-breakpoint-up(md) {
+    font-size: 1.5vw;
+  }
 }
 
 .hammer {
@@ -54,6 +70,22 @@
 
 .javascript {
   top: 43%;
-  left: 21%;
-  transform: rotate(-45deg);
+  left: 22%;
+  transform: rotate(-47deg);
+}
+
+.palette {
+  top: 50%;
+  left: 40%;
+}
+
+.css {
+  font-size: 4vw;
+  color: black;
+  top: 43%;
+  left: 40%;
+
+  @include media-breakpoint-up(md) {
+    font-size: 2vw;
+  }
 }
