@@ -15,6 +15,18 @@
         }
     }
 
+    .professional {
+        .row {
+            margin: 0;
+        }
+
+        .col {
+            min-height: calc(((100vw - 90px) / 3) * 4 / 3);
+            padding: 0;
+            margin: 15px;
+        }
+    }
+
     .transit {
         padding: 30px;
         height: calc(100vh - 80px);
