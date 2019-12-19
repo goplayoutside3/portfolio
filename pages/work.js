@@ -3,8 +3,11 @@ import { PageCurl, BusTracker } from '../components'
 
 const Work = () => (
   <main className="work">
-    <section className="container hero">
+    {/* <section className="container hero">
       <h1>Under Construction</h1>
+    </section> */}
+    <section>
+      <h2>My Toolbox</h2>
     </section>
     <section className="professional">
       <h2>Professional Work</h2>
@@ -14,10 +17,10 @@ const Work = () => (
         <PageCurl image={'/images/northface.jpg'} />
       </div>
     </section>
-    {/* <section className="transit">
+    <section className="transit">
         <h2>For Fun</h2>
-        <BusTracker />
-      </section> */}
+        {/* <BusTracker /> */}
+      </section>
   </main>
 )
 

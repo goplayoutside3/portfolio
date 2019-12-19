@@ -10,13 +10,13 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  border: solid black 5px;
-  box-shadow: inset 5px 0 10px rgba(0, 0, 0, 0.5);
+  border: solid black 4px;
+  // box-shadow: inset 5px 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .page-closed {
   position: absolute;
   top: 0;
   right: 0;
-  width: 80%;
+  height: 100%;
 }
