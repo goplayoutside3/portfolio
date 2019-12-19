@@ -12,9 +12,9 @@ const Work = () => (
     <section className="professional">
       <h2>Professional Work</h2>
       <div className="row">
-        <PageCurl image={'/images/northface.jpg'} />
-        <PageCurl image={'/images/northface.jpg'} />
-        <PageCurl image={'/images/northface.jpg'} />
+        <PageCurl image={'/images/northface.jpg'} z={"4"}/>
+        <PageCurl image={'/images/northface.jpg'} z={"3"}/>
+        <PageCurl image={'/images/northface.jpg'} z={"2"}/>
       </div>
     </section>
     <section className="transit">

@@ -10,17 +10,26 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  border-left: 3px solid black;
+  // border-left: 3px solid black;
 }
 
-.page-closed, .page-open {
+.page {
   position: absolute;
   top: 0;
   left: 0;
   height: 100%;
 }
 
-#title {
+.title {
   font-family: $tt-reg;
   font-size: 2rem;
+}
+
+.page-open,
+.page-open-shadow,
+.page-open-outline,
+.curl-open,
+.curl-open-shadow,
+.curl-open-outline {
+  visibility: hidden;
 }
