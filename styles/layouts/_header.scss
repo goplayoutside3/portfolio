@@ -5,7 +5,6 @@ header {
     height: 80px;
     display: flex;
     justify-content: space-evenly;
-    // background: $sky-blue;
     background: transparent;
 
     @include media-breakpoint-up(md) {
@@ -32,8 +31,14 @@ header {
             color: white;
 
             @include media-breakpoint-up(md) {
-                color: #bfdff1;
+                color: $light-blue;
             }
         }
+    }
+
+    .linkedin {
+        height: 1rem;
+        width: 1rem;
+        transform: translateY(-2px);
     }
 }

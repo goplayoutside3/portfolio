@@ -1,8 +1,8 @@
 import Tween from '../gsap/gsap.min.js'
 import MorphSVGPlugin from '../gsap/MorphSVGPlugin.min.js'
 
-const pageBottomColor = '#fdf6e4'
-const pageTopColor = 'none'
+const pageBottomColor = '#f6e5d1'
+const pageTopColor = '#c0766c'
 const duration = 0.4
 
 const handleHover = z => {
