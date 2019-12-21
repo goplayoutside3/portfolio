@@ -1,4 +1,4 @@
-import { Toolbox } from '../components'
+import Link from 'next/link'
 
 const Homepage = () => {
   return (
@@ -11,7 +11,15 @@ const Homepage = () => {
           <p>a front-end web developer</p>
         </div>
       </section>
-      <Toolbox />
+      <section className="introduction">
+        <p>
+          I work at <a href="https://www.reachcreative.com/" target="_blank">Reach Creative</a>, a Chicago-based design agency. Check out my{' '}
+          <Link href="/work">
+            <a>Work Page</a>
+          </Link>{' '}
+          for example projects.
+        </p>
+      </section>
     </main>
   )
 }

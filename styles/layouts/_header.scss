@@ -1,11 +1,12 @@
 header {
-    position: relative;
+    position: absolute;
     z-index: 999;
     width: 100%;
     height: 80px;
     display: flex;
     justify-content: space-evenly;
-    background: $sky-blue;
+    // background: $sky-blue;
+    background: transparent;
 
     @include media-breakpoint-up(md) {
         justify-content: flex-start;

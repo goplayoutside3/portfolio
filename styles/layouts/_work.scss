@@ -1,11 +1,12 @@
 .work {
-    background: $sky-blue;
+    background: $sand;
+    padding-top: 80px;
 
-    h2 {
+    h1, h2 {
         font-size: 2.5rem;
         line-height: 1;
         text-align: center;
-        color: white;
+        color: black;
         font-family: $solway;
     }
 
@@ -24,7 +25,7 @@
     }
 
     .professional {
-        padding: 30px;
+        padding: 30px 8vw;
 
         .row {
             margin: 0;
@@ -32,9 +33,10 @@
         }
 
         .col {
-            min-height: calc(((100vw - 90px) / 3) * 4 / 3);
+            min-height: calc((80vw / 3) * 4 / 3);
             padding: 0;
             margin: 30px;
+            box-shadow: -5px 5px 15px rgba(0, 0, 0, 0.7);
         }
     }
 }

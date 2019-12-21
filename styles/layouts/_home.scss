@@ -40,9 +40,17 @@
 
     .hero-copy {
         position: relative;
-        top: 10vh;
+        top: 25%;
         font-family: $solway;
         color: white;
+
+        @include media-breakpoint-up(sm) {
+            top: 18%;
+        }
+
+        @include media-breakpoint-up(md) {
+            top: 20vh;
+        }
 
         h1 {
             font-size: 3rem;
@@ -54,6 +62,39 @@
 
             @include media-breakpoint-up(md) {
                 font-size: 2rem;
+            }
+        }
+    }
+
+    .introduction {
+        padding: 5vw;
+        width: 100%;
+        background: $sky-blue;
+        display: flex;
+        align-items: center;
+
+        @include media-breakpoint-up(sm) {
+            padding: 5vw 20vw;
+        }
+
+        p {
+            color: white;
+            margin: auto;
+            font-size: 1rem;
+            line-height: 1.2;
+            font-family: $tt-light;
+            text-align: center;
+
+            @include media-breakpoint-up(md) {
+                font-size: 2.2vw;
+            }
+        }
+
+        a {
+            color: white;
+
+            &:hover {
+                color: white;
             }
         }
     }
