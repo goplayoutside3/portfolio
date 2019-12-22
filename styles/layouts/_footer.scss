@@ -1,7 +1,9 @@
 footer {
-    width: 100vw;
-    height: 30px;
+    background: $sky-blue;
+    width: 100%;
+    padding: 10px 0;
     font-family: $tt-light;
+    color: $light-blue;
     text-align: center;
     display: flex;
     align-items: center;

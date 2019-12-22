@@ -1,8 +1,9 @@
 import Tween from '../gsap/gsap.min.js'
 import MorphSVGPlugin from '../gsap/MorphSVGPlugin.min.js'
 
-const pageBottomColor = '#f6e5d1'
-const pageTopColor = '#c0766c'
+const pageTopColor = 'white'
+const pageBottomColor = '#b0d9f0'
+
 const duration = 0.4
 
 const handleHover = z => {
@@ -74,7 +75,7 @@ const PageCurl = ({ image = '', z = '1', title = '', site = '' }) => {
             height="600"
             style={{
               fill: 'none',
-              stroke: 'black',
+              stroke: 'none',
               strokeMiterlimit: 10,
               strokeWidth: '5px',
             }}
@@ -99,7 +100,7 @@ const PageCurl = ({ image = '', z = '1', title = '', site = '' }) => {
             id={`curl-closed${z}`}
             className="curl-closed"
             d="M44,2.51H55.67L362.29,457.28c-36.7.51-71.15,16.12-102.45,46.42-24.54,23.77-46.57,56.77-62.5,93.51Z"
-            style={{ fill: pageTopColor, stroke: 'black', strokeWidth: '5px' }}
+            style={{ fill: pageTopColor, stroke: 'none', strokeWidth: '5px' }}
           />
         </svg>
 

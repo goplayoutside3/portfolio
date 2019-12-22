@@ -24,7 +24,7 @@ const Layout = ({ children, title = 'Delilah Clement', description = '' }) => (
       <Navbar />
     <ErrorBoundary>
       {children}
-      <footer className="container">© 2019 Delilah Clement. All rights reserved.</footer>
+      <footer>© 2019 Delilah Clement. All rights reserved.</footer>
     </ErrorBoundary>
   </div>
 )

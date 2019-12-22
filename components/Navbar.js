@@ -3,6 +3,7 @@ import Link from 'next/link'
 
 const Navbar = () => (
   <header>
+    <nav>
     <li>
       <Link href="/">
         <a>Home</a>
@@ -27,6 +28,7 @@ const Navbar = () => (
         />
       </a>
     </li>
+    </nav>
   </header>
 )
 
