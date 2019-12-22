@@ -50,7 +50,8 @@
 
 .title {
   color: $sky-blue;
-  font-family: $solway;
+  font-style: italic;
+  font-family: $tt-light;
   line-height: 1.2;
   font-size: 1.2rem;
   text-align: center;
@@ -58,10 +59,12 @@
   top: 15%;
   left: 30%;
   width: 50%;
+  visibility: hidden;
 
   @include media-breakpoint-up(sm) {
     font-size: 1rem;
     top: 10%;
+    // visibility: visible;
   }
 
   @include media-breakpoint-up(lg) {

@@ -5,12 +5,7 @@
         background: $sky-blue;
         overflow: hidden;
         width: 100%;
-        min-height: 400px;
         transition: height 300ms ease-out;
-
-        @include media-breakpoint-up(md) {
-            min-height: 500px;
-        }
     }
 
     .hero-bg {
@@ -88,6 +83,7 @@
 
         a {
             color: white;
+            font-family: $tt-bold;
 
             &:hover {
                 color: white;

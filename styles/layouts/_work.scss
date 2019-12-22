@@ -1,13 +1,22 @@
 .work {
     background: $sky-blue;
     padding-top: 80px;
+    min-height: none;
+
+    @include media-breakpoint-up(md) {
+        min-height: 100vh;
+    }
 
     h1, h2 {
-        font-size: 2.5rem;
+        font-size: 2rem;
         line-height: 1;
         text-align: center;
         color: white;
         font-family: $solway;
+
+        @include media-breakpoint-up(md) {
+            font-size: 2.5rem;
+        }
     }
 
     .professional {
@@ -18,7 +27,10 @@
         }
 
         .row {
-            margin: 30px auto;
+            margin-top: 30px;
+            margin-bottom: 0;
+            margin-left: auto;
+            margin-right: auto;
             position: relative;
             display: flex;
             flex-direction: column;
@@ -30,6 +42,21 @@
                 justify-content: center;
                 flex-direction: row;
                 padding: 0 0 0 5%;
+            }
+        }
+
+        .desc {
+            color: white;
+            font-family: $tt-light;
+            text-align: center;
+
+            a {
+                color: white;
+                font-family: $tt-bold;
+    
+                &:hover {
+                    color: white;
+                }
             }
         }
     }

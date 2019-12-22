@@ -29,6 +29,13 @@ const Work = () => (
           site="https://www.nationalgeographic.com/whatsinyourpack/"
         />
       </div>
+      <p className="desc">
+        Select projects built as lead developer at{' '}
+        <a href="https://www.reachcreative.com/" target="_blank">
+          Reach Creative
+        </a>
+        , a Chicago-based design agency.
+      </p>
     </section>
     <section className="transit">
       {/* <h2>For Fun</h2> */}
