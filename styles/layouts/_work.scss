@@ -10,33 +10,16 @@
         font-family: $solway;
     }
 
-    .hero {
-        text-align: center;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-
-        h1 {
-            font-family: $tt-light;
-            font-size: 3rem;
-            color: white;
-        }
-    }
-
     .professional {
-        padding: 30px 8vw;
+        padding: 30px;
 
         .row {
-            margin: 0;
+            margin: 30px auto;
             position: relative;
-        }
-
-        .col {
-            min-height: calc((80vw / 3) * 4 / 3);
-            padding: 0;
-            margin: 30px;
-            box-shadow: -5px 5px 15px rgba(0, 0, 0, 0.7);
+            display: flex;
+            justify-content: center;
+            max-width: 1200px;
+            padding: 0 0 0 5%;
         }
     }
 }

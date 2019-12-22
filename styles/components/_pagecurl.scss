@@ -1,3 +1,9 @@
+.svg-wrapper {
+  width: 25vw;
+  height: calc((4 / 3) * 25vw);
+  position: relative;
+}
+
 .site-cta {
   color: black;
 
@@ -18,6 +24,7 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  box-shadow: -5px 5px 15px rgba(0, 0, 0, 0.5);
 }
 
 .page {
@@ -28,13 +35,14 @@
 }
 
 .title {
+  color: $sky-blue;
   font-family: $solway;
   line-height: 1.2;
   font-size: 1.5rem;
   text-align: center;
   position: absolute;
   top: 10%;
-  left: 40%;
+  left: 30%;
   width: 50%;
 }
 

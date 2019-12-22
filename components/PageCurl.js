@@ -39,7 +39,7 @@ const handleLeave = z => {
 const PageCurl = ({ image = '', z = '1', title = '', site = '' }) => {
   return (
     <div
-      className="col"
+      className="svg-wrapper"
       style={{ zIndex: z }}
       onMouseOver={() => handleHover(z)}
       onMouseOut={() => handleLeave(z)}
@@ -52,32 +52,28 @@ const PageCurl = ({ image = '', z = '1', title = '', site = '' }) => {
         <svg
           id="closed-page-paths"
           className="page"
-          viewBox="0 0 517 605.01"
+          viewBox="0 0 512 598.5"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
             id={`page-closed-shadow${z}`}
             className="page-closed-shadow"
-            d="M377.3,604.5L172.8,605L41,5l336.3-0.5V604.5z"
+            d="M375.4,598.8l-204.5,0.5L39.1-0.3l336.3-0.5V598.8z"
             style={{ fill: 'black', opacity: 0.5 }}
           />
           <path
             id={`page-closed${z}`}
             className="page-closed"
-            d="M401.5,604.5L197,605L41,0.5L401.5,0V604.5z"
+            d="M399.6,598.8l-204.5,0.5L39.1-0.3l360.5-0.5V598.8z"
             style={{ fill: pageBottomColor }}
           />
           <rect
             id="guide"
-            x="2.5"
-            y="2.5"
+            x="0.1" y="-0.8"
             width="400"
             height="600"
             style={{
               fill: 'none',
-              stroke: 'none',
-              strokeMiterlimit: 10,
-              strokeWidth: '5px',
             }}
           />
         </svg>
@@ -93,14 +89,14 @@ const PageCurl = ({ image = '', z = '1', title = '', site = '' }) => {
           <path
             id={`curl-closed-shadow${z}`}
             className="curl-closed-shadow"
-            d="M368,476c-79,7-141.5,57-171.09,129L40.91,5H57.14Z"
+            d="M366.2,470.5c-79,7-141.5,57-171.1,129l-156-600l16.2,0L366.2,470.5z"
             style={{ fill: 'black', opacity: 0.5 }}
           />
           <path
             id={`curl-closed${z}`}
             className="curl-closed"
-            d="M44,2.51H55.67L362.29,457.28c-36.7.51-71.15,16.12-102.45,46.42-24.54,23.77-46.57,56.77-62.5,93.51Z"
-            style={{ fill: pageTopColor, stroke: 'none', strokeWidth: '5px' }}
+            d="M365.4,455.5c-81-1.8-140.6,72-170.2,144l-156-600l16.2,0L365.4,455.5z"
+            style={{ fill: pageTopColor }}
           />
         </svg>
 
@@ -119,22 +115,22 @@ const PageCurl = ({ image = '', z = '1', title = '', site = '' }) => {
           <path
             id={`page-open${z}`}
             className="page-open"
-            d="M405,605H299L130,0.9L405,0V605z"
+            d="M400,599H294L125-0.1l275.1-0.4L400,599z"
             style={{ fill: pageBottomColor }}
           />
 
           <path
             id={`curl-open-shadow${z}`}
             className="curl-open-shadow"
-            d="M517,525c-79,7-189.41,2-219,74L130,3h14Z"
+            d="M513,525c-79,7-189.4,2.1-219,74.5L126-0.5h13.1L513,525z"
             style={{ fill: 'black', opacity: 0.5 }}
           />
 
           <path
             id={`curl-open${z}`}
             className="curl-open"
-            d="M133.29,2.5h9.46L512,497.94h-1.06c-82.25,0-179.48,34.23-211.36,99.72Z"
-            style={{ fill: pageTopColor, stroke: 'black', strokeWidth: '5px' }}
+            d="M512,495.9c-81-1.8-188.4,31.9-218,103.6L125-0.5h14L512,495.9z"
+            style={{ fill: pageTopColor }}
           />
         </svg>
       </a>
