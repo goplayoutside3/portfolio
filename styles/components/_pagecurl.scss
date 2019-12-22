@@ -1,7 +1,21 @@
 .svg-wrapper {
-  width: 25vw;
-  height: calc((4 / 3) * 25vw);
   position: relative;
+  width: 80vw;
+  height: calc((4 / 3) * 80vw);
+  max-width: 350px;
+  max-height: calc((4 / 3) * 350px);
+  margin-bottom: 50px;
+
+  @include media-breakpoint-up(sm) {
+    width: 28vw;
+    height: calc((4 / 3) * 28vw);
+    margin-bottom: 30px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    width: 25vw;
+    height: calc((4 / 3) * 25vw);
+  }
 }
 
 .site-cta {
@@ -38,12 +52,25 @@
   color: $sky-blue;
   font-family: $solway;
   line-height: 1.2;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   text-align: center;
   position: absolute;
-  top: 10%;
+  top: 15%;
   left: 30%;
   width: 50%;
+
+  @include media-breakpoint-up(sm) {
+    font-size: 1rem;
+    top: 10%;
+  }
+
+  @include media-breakpoint-up(lg) {
+    font-size: 1.2rem;
+  }
+
+  @include media-breakpoint-up(xl) {
+    font-size: 1.5rem;
+  }
 }
 
 .page-open,
