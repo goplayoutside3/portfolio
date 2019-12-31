@@ -3,11 +3,7 @@ import { PageCurl, BusTracker } from '../components'
 
 const Work = () => (
   <main className="work">
-    {/* <section>
-      <h2>My Toolbox</h2>
-    </section> */}
     <section className="professional">
-      {/* <h1>Under Construction</h1> */}
       <h2>Professional Work</h2>
       <div className="row">
         <PageCurl
@@ -38,9 +34,12 @@ const Work = () => (
       </p>
     </section>
     <section className="transit">
-      {/* <h2>For Fun</h2> */}
-      {/* <BusTracker /> */}
+      <h2>For Fun</h2>
+      <BusTracker />
     </section>
+  {/* <section>
+      <h2>My Toolbox</h2>
+    </section> */}
   </main>
 )
 

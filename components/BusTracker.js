@@ -88,77 +88,86 @@ const BusTracker = () => {
   }
 
   return (
-    <>
-    <h3>Chicago Transit Bus Tracker</h3>
-      <div className="selects-cont">
-        <div className="select-wrap">
-          <img className="down" src="/images/down.svg" alt="down arrow" />
-          <select
-            value={route}
-            onChange={updateRoute}
-            ref={routeSelect}
-            className="dropdown"
-            tabIndex="0"
-          >
-            <option>Select Route</option>
-            {allRoutes &&
-              allRoutes.map(rt => (
-                <option value={rt.rt} key={rt.rt}>
-                  {rt.rt}
-                </option>
-              ))}
-          </select>
+    <div className="tracker-wrapper">
+      <div className="row m-0">
+        <div className="col-12 col-md-5">
+          <img className="bus" src="/images/bus.svg" alt="Picture of bus" />
         </div>
+        <div className="col-12 col-md-7">
+          <h3>Chicago Transit Bus Tracker</h3>
+          <div className="selects-cont">
+            <div className="select-wrap">
+              <img className="down" src="/images/down.svg" alt="down arrow" />
+              <select
+                value={route}
+                onChange={updateRoute}
+                ref={routeSelect}
+                className="dropdown"
+                tabIndex="0"
+              >
+                <option>Select Route</option>
+                {allRoutes &&
+                  allRoutes.map(rt => (
+                    <option value={rt.rt} key={rt.rt}>
+                      {rt.rt}
+                    </option>
+                  ))}
+              </select>
+            </div>
 
-        <div className="select-wrap">
-          <img className="down" src="/images/down.svg" alt="down arrow" />
-          <select
-            value={direction}
-            onChange={updateDirection}
-            ref={dirSelect}
-            className="dropdown"
-            tabIndex="0"
-          >
-            <option>Select Direction</option>
-            {allDirections &&
-              allDirections.map(dir => (
-                <option value={dir.dir} key={dir.dir}>
-                  {dir.dir}
-                </option>
-              ))}
-          </select>
-        </div>
+            <div className="select-wrap">
+              <img className="down" src="/images/down.svg" alt="down arrow" />
+              <select
+                value={direction}
+                onChange={updateDirection}
+                ref={dirSelect}
+                className="dropdown"
+                tabIndex="0"
+              >
+                <option>Select Direction</option>
+                {allDirections &&
+                  allDirections.map(dir => (
+                    <option value={dir.dir} key={dir.dir}>
+                      {dir.dir}
+                    </option>
+                  ))}
+              </select>
+            </div>
 
-        <div className="select-wrap">
-          <img className="down" src="/images/down.svg" alt="down arrow" />
-          <select
-            value={stopId}
-            onChange={updateStop}
-            ref={stopSelect}
-            className="dropdown"
-            tabIndex="0"
-          >
-            <option>Select Stop</option>
-            {allStops &&
-              allStops.map(stop => (
-                <option value={stop.stpid} key={stop.stpid}>
-                  {stop.stpnm}
-                </option>
+            <div className="select-wrap">
+              <img className="down" src="/images/down.svg" alt="down arrow" />
+              <select
+                value={stopId}
+                onChange={updateStop}
+                ref={stopSelect}
+                className="dropdown"
+                tabIndex="0"
+              >
+                <option>Select Stop</option>
+                {allStops &&
+                  allStops.map(stop => (
+                    <option value={stop.stpid} key={stop.stpid}>
+                      {stop.stpnm}
+                    </option>
+                  ))}
+              </select>
+            </div>
+          </div>
+
+          <ul className="arrivals">
+            {allArrivals &&
+              allArrivals.slice(0, 5).map(arr => (
+                <li key={arr.vid}>
+                  <span>{arr.des}</span>
+                  <span className="eta">
+                    {arr.prdctdn === 'DUE' ? 'DUE' : `${arr.prdctdn}min`}
+                  </span>
+                </li>
               ))}
-          </select>
+          </ul>
         </div>
       </div>
-
-      <ul className="arrivals">
-        {allArrivals &&
-          allArrivals.slice(0, 5).map(arr => (
-            <li key={arr.vid}>
-              <span>{arr.des}</span>
-              <span className="eta">{arr.prdctdn === 'DUE' ? 'DUE' : `${arr.prdctdn}min`}</span>
-            </li>
-          ))}
-      </ul>
-    </>
+    </div>
   )
 }
 
