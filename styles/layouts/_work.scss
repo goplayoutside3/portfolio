@@ -1,18 +1,10 @@
 .work {
     background: $sky-blue;
     padding-top: 80px;
-    min-height: none;
+    min-height: 0;
 
     @include media-breakpoint-up(md) {
         min-height: 100vh;
-    }
-
-    section {
-        margin-bottom: 30px;
-
-        @include media-breakpoint-up(md) {
-            margin-bottom: 50px;
-        }
     }
 
     h1, h2 {
@@ -29,9 +21,11 @@
 
     .professional {
         padding: 15px;
+        margin-bottom: 30px;
 
         @include media-breakpoint-up(lg) {
             padding: 30px;
+            margin-bottom: 50px;
         }
 
         .row {
