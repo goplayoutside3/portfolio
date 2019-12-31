@@ -8,7 +8,11 @@
     }
 
     section {
-        margin-bottom: 50px;
+        margin-bottom: 30px;
+
+        @include media-breakpoint-up(md) {
+            margin-bottom: 50px;
+        }
     }
 
     h1, h2 {
@@ -60,6 +64,22 @@
     
                 &:hover {
                     color: white;
+                }
+            }
+
+            &.mobile {
+                margin-top: 30px;
+
+                @include media-breakpoint-up(md) {
+                    display: none;
+                }
+            }
+
+            &.desktop {
+                display: none;
+
+                @include media-breakpoint-up(md) {
+                    display: block;
                 }
             }
         }

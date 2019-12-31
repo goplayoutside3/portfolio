@@ -90,10 +90,10 @@ const BusTracker = () => {
   return (
     <div className="tracker-wrapper">
       <div className="row m-0">
-        <div className="col-12 col-md-5">
+        <div className="col-12 col-md-5 col-lg-6">
           <img className="bus" src="/images/bus.svg" alt="Picture of bus" />
         </div>
-        <div className="col-12 col-md-7">
+        <div className="col-12 col-md-7 col-lg-6">
           <h3>Chicago Transit Bus Tracker</h3>
           <div className="selects-cont">
             <div className="select-wrap">
@@ -155,6 +155,7 @@ const BusTracker = () => {
           </div>
 
           <ul className="arrivals">
+          <h4>Arrivals:</h4>
             {allArrivals &&
               allArrivals.slice(0, 5).map(arr => (
                 <li key={arr.vid}>

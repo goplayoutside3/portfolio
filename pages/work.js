@@ -5,6 +5,13 @@ const Work = () => (
   <main className="work">
     <section className="professional">
       <h2>Professional Work</h2>
+      <p className="desc mobile">
+        Select projects built as lead developer at{' '}
+        <a href="https://www.reachcreative.com/" target="_blank">
+          Reach Creative
+        </a>
+        , a Chicago-based design agency.
+      </p>
       <div className="row">
         <PageCurl
           image="/images/northface.jpg"
@@ -25,7 +32,7 @@ const Work = () => (
           site="https://www.nationalgeographic.com/whatsinyourpack/"
         />
       </div>
-      <p className="desc">
+      <p className="desc desktop">
         Select projects built as lead developer at{' '}
         <a href="https://www.reachcreative.com/" target="_blank">
           Reach Creative
