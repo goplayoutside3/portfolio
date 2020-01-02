@@ -7,7 +7,7 @@ const pageBottomColor = '#b0d9f0'
 const duration = 0.4
 
 const handleHover = z => {
-  const tl = new TimelineMax
+  const tl = new TimelineLite
 
   tl.to(`#page-closed${z}`, duration, {morphSVG: `#page-open${z}`}, 0)
     .to(`#page-closed-shadow${z}`, duration, {morphSVG: `#page-open-shadow${z}`}, 0)
@@ -16,7 +16,7 @@ const handleHover = z => {
 }
 
 const handleLeave = z => {
-  const tl = new TimelineMax
+  const tl = new TimelineLite
 
   tl.to(`#page-closed${z}`, duration, {morphSVG: `#page-closed${z}`}, 0)
   .to(`#page-closed-shadow${z}`, duration, {morphSVG: `#page-closed-shadow${z}`}, 0)
