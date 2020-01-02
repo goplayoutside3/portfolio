@@ -1,4 +1,4 @@
-import Tween from '../gsap/gsap.min.js'
+import '../gsap/gsap.min.js'
 import MorphSVGPlugin from '../gsap/MorphSVGPlugin.min.js'
 
 const pageTopColor = 'white'
@@ -7,33 +7,21 @@ const pageBottomColor = '#b0d9f0'
 const duration = 0.4
 
 const handleHover = z => {
-  const openPageBottom = Tween.to(`#page-closed${z}`, duration, {
-    morphSVG: { shape: `#page-open${z}`, shapeIndex: 'auto' },
-  })
-  const openPageShadow = Tween.to(`#page-closed-shadow${z}`, duration, {
-    morphSVG: `#page-open-shadow${z}`,
-  })
-  const openCurl = Tween.to(`#curl-closed${z}`, duration, {
-    morphSVG: `#curl-open${z}`,
-  })
-  const openCurlShadow = Tween.to(`#curl-closed-shadow${z}`, duration, {
-    morphSVG: `#curl-open-shadow${z}`,
-  })
+  const tl = new TimelineMax
+
+  tl.to(`#page-closed${z}`, duration, {morphSVG: `#page-open${z}`}, 0)
+    .to(`#page-closed-shadow${z}`, duration, {morphSVG: `#page-open-shadow${z}`}, 0)
+    .to(`#curl-closed${z}`, duration, {morphSVG: `#curl-open${z}`}, 0)
+    .to(`#curl-closed-shadow${z}`, duration, {morphSVG: `#curl-open-shadow${z}`}, 0)
 }
 
 const handleLeave = z => {
-  const openPageBottom = Tween.to(`#page-closed${z}`, duration, {
-    morphSVG: { shape: `#page-closed${z}`, shapeIndex: '12' },
-  })
-  const openPageShadow = Tween.to(`#page-closed-shadow${z}`, duration, {
-    morphSVG: `#page-closed-shadow${z}`,
-  })
-  const openCurl = Tween.to(`#curl-closed${z}`, duration, {
-    morphSVG: `#curl-closed${z}`,
-  })
-  const openCurlShadow = Tween.to(`#curl-closed-shadow${z}`, duration, {
-    morphSVG: `#curl-closed-shadow${z}`,
-  })
+  const tl = new TimelineMax
+
+  tl.to(`#page-closed${z}`, duration, {morphSVG: `#page-closed${z}`}, 0)
+  .to(`#page-closed-shadow${z}`, duration, {morphSVG: `#page-closed-shadow${z}`}, 0)
+  .to(`#curl-closed${z}`, duration, {morphSVG: `#curl-closed${z}`}, 0)
+  .to(`#curl-closed-shadow${z}`, duration, {morphSVG: `#curl-closed-shadow${z}`}, 0)
 }
 
 const PageCurl = ({ image = '', z = '1', title = '', site = '' }) => {
@@ -83,7 +71,7 @@ const PageCurl = ({ image = '', z = '1', title = '', site = '' }) => {
         <svg
           id="closed-curl-paths"
           className="page"
-          viewBox="0 0 517 605.01"
+          viewBox="0 0 512 598.5"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
@@ -103,7 +91,7 @@ const PageCurl = ({ image = '', z = '1', title = '', site = '' }) => {
         <svg
           id="open-curl-paths"
           className="page"
-          viewBox="0 0 517 605.01"
+          viewBox="0 0 512 598.5"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
