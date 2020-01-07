@@ -1,6 +1,6 @@
 import '../gsap/gsap.min.js'
 import MorphSVGPlugin from '../gsap/MorphSVGPlugin.min.js'
-import {useEffect, useImperativeHandle} from 'react'
+import { useEffect } from 'react'
 
 const PageCurl = ({ image = '', z = '1', title = '', site = '', isMobile }) => {
   const pageTopColor = 'white'
@@ -8,7 +8,6 @@ const PageCurl = ({ image = '', z = '1', title = '', site = '', isMobile }) => {
   const duration = 0.4
   
   const handleHover = z => {
-    console.log('hover', z)
     const tl = new TimelineLite
     tl.to(`#page-closed${z}`, duration, {morphSVG: `#page-open${z}`}, 0)
       .to(`#page-closed-shadow${z}`, duration, {morphSVG: `#page-open-shadow${z}`}, 0)
@@ -17,16 +16,21 @@ const PageCurl = ({ image = '', z = '1', title = '', site = '', isMobile }) => {
   }
   
   const handleLeave = z => {
-    console.log('leave', z)
     const tl = new TimelineLite
     tl.to(`#page-closed${z}`, duration, {morphSVG: `#page-closed${z}`}, 0)
       .to(`#page-closed-shadow${z}`, duration, {morphSVG: `#page-closed-shadow${z}`}, 0)
       .to(`#curl-closed${z}`, duration, {morphSVG: `#curl-closed${z}`}, 0)
       .to(`#curl-closed-shadow${z}`, duration, {morphSVG: `#curl-closed-shadow${z}`}, 0)
   }
+
+  const mobileTrigger = (entries) => {
+    if (entries[0].isIntersecting === true ) {
+      handleHover(z)
+      window.setTimeout(handleLeave, 800, z)
+    }
+  }
   
   useEffect(() => {
-    console.log(isMobile)
     if (!isMobile) return
 
     if (isMobile === 'medium' && z === '2') {
@@ -38,12 +42,20 @@ const PageCurl = ({ image = '', z = '1', title = '', site = '', isMobile }) => {
     }
 
     else if (isMobile === 'small') {
-      // Intersection observer
+      const options = {
+        root: null,
+        rootMargin: `${z}px`, // differentiates between observers created on the page
+        threshold: 1.0
+      }
+      let observer = new IntersectionObserver(mobileTrigger, options)
+      let target = document.getElementById(`svg-wrapper${z}`)
+      observer.observe(target)
     }
   }, [isMobile]) // call this only when isMobile changes
 
   return (
     <div
+      id={`svg-wrapper${z}`}
       className="svg-wrapper"
       style={{ zIndex: z }}
       onMouseOver={() => handleHover(z)}
