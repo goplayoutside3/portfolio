@@ -21,7 +21,9 @@ export default class MyApp extends App {
   }
 
   checkWidth = () => {
-    if (window.innerWidth < 768) this.setState({ isMobile: true })
+    if (window.innerWidth < 576) this.setState({ isMobile: 'small' })
+    else if (window.innerWidth < 770) this.setState({ isMobile: 'medium' })
+    else this.setState({ isMobile: false })
   }
 
   render() {

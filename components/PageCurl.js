@@ -1,31 +1,47 @@
 import '../gsap/gsap.min.js'
 import MorphSVGPlugin from '../gsap/MorphSVGPlugin.min.js'
+import {useEffect, useImperativeHandle} from 'react'
 
-const pageTopColor = 'white'
-const pageBottomColor = '#b0d9f0'
+const PageCurl = ({ image = '', z = '1', title = '', site = '', isMobile }) => {
+  const pageTopColor = 'white'
+  const pageBottomColor = '#b0d9f0'
+  const duration = 0.4
+  
+  const handleHover = z => {
+    console.log('hover', z)
+    const tl = new TimelineLite
+    tl.to(`#page-closed${z}`, duration, {morphSVG: `#page-open${z}`}, 0)
+      .to(`#page-closed-shadow${z}`, duration, {morphSVG: `#page-open-shadow${z}`}, 0)
+      .to(`#curl-closed${z}`, duration, {morphSVG: `#curl-open${z}`}, 0)
+      .to(`#curl-closed-shadow${z}`, duration, {morphSVG: `#curl-open-shadow${z}`}, 0)
+  }
+  
+  const handleLeave = z => {
+    console.log('leave', z)
+    const tl = new TimelineLite
+    tl.to(`#page-closed${z}`, duration, {morphSVG: `#page-closed${z}`}, 0)
+      .to(`#page-closed-shadow${z}`, duration, {morphSVG: `#page-closed-shadow${z}`}, 0)
+      .to(`#curl-closed${z}`, duration, {morphSVG: `#curl-closed${z}`}, 0)
+      .to(`#curl-closed-shadow${z}`, duration, {morphSVG: `#curl-closed-shadow${z}`}, 0)
+  }
+  
+  useEffect(() => {
+    console.log(isMobile)
+    if (!isMobile) return
 
-const duration = 0.4
+    if (isMobile === 'medium' && z === '2') {
+        const id = setInterval(() => {
+          handleHover(2)
+          window.setTimeout(handleLeave, 800, 2)
+        }, 4000)
+        return () => clearInterval(id);
+    }
 
-const handleHover = z => {
-  const tl = new TimelineLite
+    else if (isMobile === 'small') {
+      // Intersection observer
+    }
+  }, [isMobile]) // call this only when isMobile changes
 
-  tl.to(`#page-closed${z}`, duration, {morphSVG: `#page-open${z}`}, 0)
-    .to(`#page-closed-shadow${z}`, duration, {morphSVG: `#page-open-shadow${z}`}, 0)
-    .to(`#curl-closed${z}`, duration, {morphSVG: `#curl-open${z}`}, 0)
-    .to(`#curl-closed-shadow${z}`, duration, {morphSVG: `#curl-open-shadow${z}`}, 0)
-}
-
-const handleLeave = z => {
-  const tl = new TimelineLite
-
-  tl.to(`#page-closed${z}`, duration, {morphSVG: `#page-closed${z}`}, 0)
-  .to(`#page-closed-shadow${z}`, duration, {morphSVG: `#page-closed-shadow${z}`}, 0)
-  .to(`#curl-closed${z}`, duration, {morphSVG: `#curl-closed${z}`}, 0)
-  .to(`#curl-closed-shadow${z}`, duration, {morphSVG: `#curl-closed-shadow${z}`}, 0)
-}
-
-const PageCurl = ({ image = '', z = '1', title = '', site = '', isMobile = true }) => {
-  console.log(isMobile)
   return (
     <div
       className="svg-wrapper"
