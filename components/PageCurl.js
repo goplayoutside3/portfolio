@@ -6,42 +6,40 @@ const PageCurl = ({ image = '', z = '1', title = '', site = '', isMobile }) => {
   const pageTopColor = 'white'
   const pageBottomColor = '#b0d9f0'
   const duration = 0.4
-  
+
   const handleHover = z => {
-    const tl = new TimelineLite
-    tl.to(`#page-closed${z}`, duration, {morphSVG: `#page-open${z}`}, 0)
-      .to(`#page-closed-shadow${z}`, duration, {morphSVG: `#page-open-shadow${z}`}, 0)
-      .to(`#curl-closed${z}`, duration, {morphSVG: `#curl-open${z}`}, 0)
-      .to(`#curl-closed-shadow${z}`, duration, {morphSVG: `#curl-open-shadow${z}`}, 0)
-  }
-  
-  const handleLeave = z => {
-    const tl = new TimelineLite
-    tl.to(`#page-closed${z}`, duration, {morphSVG: `#page-closed${z}`}, 0)
-      .to(`#page-closed-shadow${z}`, duration, {morphSVG: `#page-closed-shadow${z}`}, 0)
-      .to(`#curl-closed${z}`, duration, {morphSVG: `#curl-closed${z}`}, 0)
-      .to(`#curl-closed-shadow${z}`, duration, {morphSVG: `#curl-closed-shadow${z}`}, 0)
+    const tl = new TimelineLite()
+    tl.to(`#page-closed${z}`, duration, { morphSVG: `#page-open${z}` }, 0)
+      .to(`#page-closed-shadow${z}`, duration, { morphSVG: `#page-open-shadow${z}` }, 0)
+      .to(`#curl-closed${z}`, duration, { morphSVG: `#curl-open${z}` }, 0)
+      .to(`#curl-closed-shadow${z}`, duration, { morphSVG: `#curl-open-shadow${z}` }, 0)
   }
 
-  const mobileTrigger = (entries) => {
-    if (entries[0].isIntersecting === true ) {
-      handleHover(z)
-      window.setTimeout(handleLeave, 800, z)
-    }
+  const handleLeave = z => {
+    const tl = new TimelineLite()
+    tl.to(`#page-closed${z}`, duration, { morphSVG: `#page-closed${z}` }, 0)
+      .to(`#page-closed-shadow${z}`, duration, { morphSVG: `#page-closed-shadow${z}` }, 0)
+      .to(`#curl-closed${z}`, duration, { morphSVG: `#curl-closed${z}` }, 0)
+      .to(`#curl-closed-shadow${z}`, duration, { morphSVG: `#curl-closed-shadow${z}` }, 0)
+  }
+
+  const mobileTrigger = entries => {
+    if (entries[0].isIntersecting === true) handleHover(z)
+    else handleLeave(z)
   }
   
   useEffect(() => {
     if (!isMobile) return
 
-    if (isMobile === 'medium' && z === '2') {
-        const id = setInterval(() => {
-          handleHover(2)
-          window.setTimeout(handleLeave, 800, 2)
-        }, 4000)
-        return () => clearInterval(id);
-    }
-
-    else if (isMobile === 'small') {
+    if (isMobile === 'medium' && z === '4') {
+      handleHover(4)
+      window.setTimeout(handleLeave, 1500, 4)
+      const id = setInterval(() => {
+        handleHover(4)
+        window.setTimeout(handleLeave, 1500, 4)
+      }, 4500)
+      return () => clearInterval(id)
+    } else if (isMobile === 'small') {
       const options = {
         root: null,
         rootMargin: `${z}px`, // differentiates between observers created on the page
