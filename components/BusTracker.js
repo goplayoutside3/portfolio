@@ -82,6 +82,7 @@ const BusTracker = () => {
       })
       const arrivals = await response.json()
       loadArrivals(arrivals)
+      console.log(arrivals)
     } catch (error) {
       console.log('Something went wrong')
     }
@@ -155,10 +156,11 @@ const BusTracker = () => {
           </div>
 
           <ul className="arrivals">
-          <h4>Arrivals:</h4>
+            <h4>Arrivals:</h4>
             {allArrivals &&
               allArrivals.slice(0, 5).map(arr => (
                 <li key={arr.vid}>
+                  <span>#{arr.rtdd}  </span>
                   <span>{arr.des}</span>
                   <span className="eta">
                     {arr.prdctdn === 'DUE' ? 'DUE' : `${arr.prdctdn}min`}

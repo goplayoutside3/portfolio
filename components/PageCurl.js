@@ -55,15 +55,6 @@ const PageCurl = ({ image = '', z = '1', title = '', site = '' }) => {
             d="M399.6,598.8l-204.5,0.5L39.1-0.3l360.5-0.5V598.8z"
             style={{ fill: pageBottomColor }}
           />
-          <rect
-            id="guide"
-            x="0.1" y="-0.8"
-            width="400"
-            height="600"
-            style={{
-              fill: 'none',
-            }}
-          />
         </svg>
 
         <p className="title">{title}</p>
