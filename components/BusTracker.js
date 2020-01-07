@@ -82,7 +82,6 @@ const BusTracker = () => {
       })
       const arrivals = await response.json()
       loadArrivals(arrivals)
-      console.log(arrivals)
     } catch (error) {
       console.log('Something went wrong')
     }

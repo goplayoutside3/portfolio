@@ -24,7 +24,8 @@ const handleLeave = z => {
   .to(`#curl-closed-shadow${z}`, duration, {morphSVG: `#curl-closed-shadow${z}`}, 0)
 }
 
-const PageCurl = ({ image = '', z = '1', title = '', site = '' }) => {
+const PageCurl = ({ image = '', z = '1', title = '', site = '', isMobile = true }) => {
+  console.log(isMobile)
   return (
     <div
       className="svg-wrapper"

@@ -1,7 +1,7 @@
 import React from 'react'
 import { PageCurl, BusTracker } from '../components'
 
-const Work = () => (
+const Work = ({ isMobile }) => (
   <main className="work">
     <section className="professional">
       <h2>Professional Work</h2>
@@ -18,18 +18,21 @@ const Work = () => (
           z="4"
           title="Rewind Nature"
           site="https://www.nationalgeographic.com/rewindnature/"
+          isMobile={isMobile}
         />
         <PageCurl
           image="/images/mazda.jpg"
           z="3"
           title="Inspiration in Every Mile"
           site="https://www.nationalgeographic.com/mazda/"
+          isMobile={isMobile}
         />
         <PageCurl
           image="/images/maine.jpg"
           z="2"
           title="What's In Your Pack?"
           site="https://www.nationalgeographic.com/whatsinyourpack/"
+          isMobile={isMobile}
         />
       </div>
       <p className="desc desktop">
