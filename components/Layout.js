@@ -13,6 +13,8 @@ const Layout = ({ children, title = 'Delilah Clement', description = '' }) => (
         content={`delilah clement portfolio web developer`}
       />
 
+      <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico"></link>
+
       <meta property="og:title" content={title} />
       <meta property="og:type" content="article" />
       <meta property="og:url" content={''} />
