@@ -14,6 +14,8 @@ const Layout = ({ children, title = 'Delilah Clement', description = '' }) => (
       />
 
       <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico"></link>
+      <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.svg"></link>
+      <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.png"></link>
 
       <meta property="og:title" content={title} />
       <meta property="og:type" content="article" />
