@@ -1,5 +1,5 @@
 import React from 'react'
-import { PageCurl, BusTracker } from '../components'
+import { PageCurl, BusTracker, Toolbox } from '../components'
 
 const Work = ({ isMobile }) => (
   <main className="work">
@@ -49,6 +49,7 @@ const Work = ({ isMobile }) => (
     </section>
   <section>
       <h2>My Toolbox</h2>
+      <Toolbox />
     </section>
   </main>
 )

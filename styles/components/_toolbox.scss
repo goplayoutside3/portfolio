@@ -1,0 +1,23 @@
+.toolbox {
+  .row {
+    padding: 50px;
+  }
+
+  .list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
+  .tool {
+    width: 90%;
+  }
+
+  .technologies {
+    color: white;
+    // list-style: none;
+    font-size: 1.5rem;
+    font-family: $tt-light;
+  }
+}
