@@ -47,9 +47,9 @@ const Work = ({ isMobile }) => (
       <h2>For Fun</h2>
       <BusTracker />
     </section>
-  {/* <section>
+  <section>
       <h2>My Toolbox</h2>
-    </section> */}
+    </section>
   </main>
 )
 
