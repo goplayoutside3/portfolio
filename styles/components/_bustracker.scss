@@ -6,6 +6,8 @@
 
   .row {
     width: 100%;
+    display: flex;
+    justify-content: center;
   }
 }
 
@@ -14,30 +16,12 @@ h3 {
   font-family: $tt-reg;
   font-size: 1.2rem;
   margin-bottom: 20px;
-  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 
   @include media-breakpoint-up(md) {
-    margin-top: 0;
     font-size: 1.5rem;
-  }
-}
-
-.bus-column {
-  display: flex;
-  align-items: center;
-}
-
-.bus {
-  width: 100%;
-  display: block;
-  margin: auto;
-
-  @include media-breakpoint-up(sm) {
-    width: 85%;
-  }
-
-  @include media-breakpoint-up(md) {
-    width: 100%;
   }
 }
 
@@ -59,8 +43,7 @@ h3 {
     color: white;
     font-family: $tt-reg;
     -webkit-appearance: none; // hide default arrows
-    margin-left: 5px;
-    margin-bottom: 5px;
+    margin: 0 3px 6px 3px;
     padding: 5px 10px;
     width: 200px;
     cursor: pointer;
@@ -68,6 +51,10 @@ h3 {
 
     @include media-breakpoint-up(sm) {
       width: 130px;
+    }
+
+    @include media-breakpoint-up(md) {
+      width: 180px;
     }
   }
 }

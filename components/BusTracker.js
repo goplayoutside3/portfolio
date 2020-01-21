@@ -94,8 +94,8 @@ const BusTracker = () => {
 
   return (
     <div className="tracker-wrapper">
-      <h3>Chicago Transit Bus Tracker</h3>
       <div className="row m-0">
+      <h3>Chicago Transit Bus Tracker</h3>
         <div className="col">
           <div className="selects-cont">
             <select

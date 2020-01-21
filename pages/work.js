@@ -43,13 +43,13 @@ const Work = ({ isMobile }) => (
         , a Chicago-based design agency.
       </p>
     </section>
-    <section className="transit">
-      <h2>For Fun</h2>
-      <BusTracker />
-    </section>
     <section className="toolbox">
       <h2>My Toolbox</h2>
       <Toolbox />
+    </section>
+    <section className="transit">
+      <h2>For Fun</h2>
+      <BusTracker />
     </section>
   </main>
 )
