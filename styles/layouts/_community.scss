@@ -1,17 +1,32 @@
 .community {
-    background: $sky-blue;
+  background: $sky-blue;
 
-    .hero {
-        text-align: center;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
+  .hero {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 
-        h1 {
-            font-family: $tt-light;
-            font-size: 3rem;
-            color: white;
-        }
+    h1 {
+      font-family: $solway;
+      font-size: 7vw;
+      color: white;
+      position: absolute;
     }
+  }
+
+  .skyline {
+    width: 90%;
+    transform: translateY(-46%);
+  }
+
+  .skyline-path {
+    fill: none;
+    stroke: #ffffff;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+  }
 }
