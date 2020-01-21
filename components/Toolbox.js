@@ -1,7 +1,7 @@
 const Toolbox = () => {
   return (
       <div className="row">
-        <div className="col-md-4 col-6 list">
+        <div className="col-sm-4 col-6 list">
           <ul className="technologies">
             <li>Javascript</li>
             <li>React</li>
@@ -11,7 +11,7 @@ const Toolbox = () => {
           </ul>
         </div>
 
-        <div className="col-md-4 col-6 list">
+        <div className="col-sm-4 col-6 list">
           <ul className="technologies">
             <li>CSS Animations</li>
             <li>Green Sock</li>
@@ -20,7 +20,7 @@ const Toolbox = () => {
             <li>Prismic</li>
           </ul>
         </div>
-        <div className="col-md-4 col-12 list">
+        <div className="col-sm-4 col-12 list">
           <img
             className="tool"
             src="/images/toolbox.svg"

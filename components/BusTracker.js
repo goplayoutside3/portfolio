@@ -8,6 +8,7 @@ const BusTracker = () => {
   const [direction, setDirection] = useState('')
   const [allStops, loadAllStops] = useState(null)
   const [stopId, setStop] = useState('')
+  const [stopName, setStopName] = useState('')
   const [allArrivals, loadArrivals] = useState(null)
 
   const routeSelect = useRef(null)
@@ -32,6 +33,7 @@ const BusTracker = () => {
     setRoute(routeSelect.current.value)
     setDirection('')
     setStop('')
+    setStopName('')
     if (allArrivals) loadArrivals(null)
     getDirections(routeSelect.current.value)
   }
@@ -39,12 +41,15 @@ const BusTracker = () => {
   const updateDirection = () => {
     setDirection(dirSelect.current.value)
     setStop('')
+    setStopName('')
     if (allArrivals) loadArrivals(null)
     getAllStops(dirSelect.current.value)
   }
 
   const updateStop = () => {
+    console.log(stopSelect.current)
     setStop(stopSelect.current.value)
+    setStopName(stopSelect.current.name)
     getArrivals(stopSelect.current.value)
   }
 
@@ -89,77 +94,65 @@ const BusTracker = () => {
 
   return (
     <div className="tracker-wrapper">
+      <h3>Chicago Transit Bus Tracker</h3>
       <div className="row m-0">
-        <div className="col-12 col-md-5 col-lg-6">
-          <img className="bus" src="/images/bus.svg" alt="Picture of bus" />
-        </div>
-        <div className="col-12 col-md-7 col-lg-6">
-          <h3>Chicago Transit Bus Tracker</h3>
+        <div className="col">
           <div className="selects-cont">
-            <div className="select-wrap">
-              <img className="down" src="/images/down.svg" alt="down arrow" />
-              <select
-                value={route}
-                onChange={updateRoute}
-                ref={routeSelect}
-                className="dropdown"
-                tabIndex="0"
-              >
-                <option>Select Route</option>
-                {allRoutes &&
-                  allRoutes.map(rt => (
-                    <option value={rt.rt} key={rt.rt}>
-                      {rt.rt}
-                    </option>
-                  ))}
-              </select>
-            </div>
+            <select
+              value={route}
+              onChange={updateRoute}
+              ref={routeSelect}
+              className="dropdown"
+              tabIndex="0"
+            >
+              <option>Select Route</option>
+              {allRoutes &&
+                allRoutes.map(rt => (
+                  <option value={rt.rt} key={rt.rt}>
+                    {rt.rt}
+                  </option>
+                ))}
+            </select>
 
-            <div className="select-wrap">
-              <img className="down" src="/images/down.svg" alt="down arrow" />
-              <select
-                value={direction}
-                onChange={updateDirection}
-                ref={dirSelect}
-                className="dropdown"
-                tabIndex="0"
-              >
-                <option>Select Direction</option>
-                {allDirections &&
-                  allDirections.map(dir => (
-                    <option value={dir.dir} key={dir.dir}>
-                      {dir.dir}
-                    </option>
-                  ))}
-              </select>
-            </div>
+            <select
+              value={direction}
+              onChange={updateDirection}
+              ref={dirSelect}
+              className="dropdown"
+              tabIndex="0"
+            >
+              <option>Select Direction</option>
+              {allDirections &&
+                allDirections.map(dir => (
+                  <option value={dir.dir} key={dir.dir}>
+                    {dir.dir}
+                  </option>
+                ))}
+            </select>
 
-            <div className="select-wrap">
-              <img className="down" src="/images/down.svg" alt="down arrow" />
-              <select
-                value={stopId}
-                onChange={updateStop}
-                ref={stopSelect}
-                className="dropdown"
-                tabIndex="0"
-              >
-                <option>Select Stop</option>
-                {allStops &&
-                  allStops.map(stop => (
-                    <option value={stop.stpid} key={stop.stpid}>
-                      {stop.stpnm}
-                    </option>
-                  ))}
-              </select>
-            </div>
+            <select
+              value={stopId}
+              onChange={updateStop}
+              ref={stopSelect}
+              className="dropdown"
+              tabIndex="0"
+            >
+              <option>Select Stop</option>
+              {allStops &&
+                allStops.map(stop => (
+                  <option value={stop.stpid} name={stop.stpnm} key={stop.stpid}>
+                    {stop.stpnm}
+                  </option>
+                ))}
+            </select>
           </div>
 
           <ul className="arrivals">
-            <h4>Arrivals:</h4>
+            <h5>{stopName ? stopName : ''}</h5>
             {allArrivals &&
               allArrivals.slice(0, 5).map(arr => (
                 <li key={arr.vid}>
-                  <span>#{arr.rtdd}  </span>
+                  <span>#{arr.rtdd} </span>
                   <span>{arr.des}</span>
                   <span className="eta">
                     {arr.prdctdn === 'DUE' ? 'DUE' : `${arr.prdctdn}min`}

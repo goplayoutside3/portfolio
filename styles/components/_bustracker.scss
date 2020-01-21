@@ -22,6 +22,11 @@ h3 {
   }
 }
 
+.bus-column {
+  display: flex;
+  align-items: center;
+}
+
 .bus {
   width: 100%;
   display: block;
@@ -39,48 +44,39 @@ h3 {
 .selects-cont {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
   @include media-breakpoint-up(sm) {
     flex-direction: row;
-  }
-
-  .select-wrap {
-    white-space: nowrap;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    margin: 0 0 20px 0;
-
-    @include media-breakpoint-up(sm) {
-      margin: 0 15px 0 0;
-    }
+    align-items: flex-start;
   }
 
   .dropdown {
     background: transparent;
-    border: none;
+    border: white 2px solid;
+    border-radius: 0;
     color: white;
     font-family: $tt-reg;
     -webkit-appearance: none; // hide default arrows
-    cursor: pointer;
     margin-left: 5px;
-  }
+    margin-bottom: 5px;
+    padding: 5px 10px;
+    width: 200px;
+    cursor: pointer;
+    text-align-last: center;
 
-  .down {
-    height: 1rem;
-    width: 1rem;
-    // transform: rotate(-90deg);
+    @include media-breakpoint-up(sm) {
+      width: 130px;
+    }
   }
 }
 
 .arrivals {
   list-style: none;
-  margin-top: 15px;
-  min-height: 150px;
-
-  @include media-breakpoint-up(md) {
-    margin-top: 30px;
-  }
+  min-height: 100px;
+  padding-top: 30px;
+  text-align: center;
 
   h4 {
     color: white;

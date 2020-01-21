@@ -22,18 +22,18 @@
     max-width: 280px;
     margin-top: 30px;
 
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(sm) {
       margin-top: auto;
     }
   }
 
   .technologies {
     color: white;
-    // list-style: none;
+    list-style: none;
     font-size: 1rem;
     font-family: $tt-light;
 
-    @include media-breakpoint-up(sm) {
+    @include media-breakpoint-up(md) {
       font-size: 1.5rem;
     }
   }
