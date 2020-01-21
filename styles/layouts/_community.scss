@@ -13,12 +13,29 @@
       font-size: 7vw;
       color: white;
       position: absolute;
+      transform: translateY(30%);
+
+      @include media-breakpoint-up(md) {
+          transform: translateY(70%);
+      }
+
+      @include media-breakpoint-up(lg) {
+        font-size: 4.5rem;
+      }
     }
   }
 
   .skyline {
     width: 90%;
-    transform: translateY(-46%);
+    transform: translateY(-40%);
+    
+    @include media-breakpoint-up(md) {
+        transform: translateY(-30%);
+    }
+
+    @include media-breakpoint-up(lg) {
+        width: 900px;
+    }
   }
 
   .skyline-path {
