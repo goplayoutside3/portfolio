@@ -26,7 +26,7 @@ class Community extends Component {
     const drawTween = TweenMax.fromTo(
       '#curves',
       10,
-      { drawSVG: '100% 100%'},
+      { drawSVG: '100% 100%' },
       { drawSVG: '0% 100%' }
     )
     drawTween.pause()
@@ -35,8 +35,10 @@ class Community extends Component {
 
   handleScroll = () => {
     const windowHeight = window.innerHeight
-    const bottomPosition = document.getElementById('rooted').getBoundingClientRect().bottom
-    const newProgress = ((bottomPosition * 0.8) - windowHeight) / windowHeight
+    const bottomPosition = document
+      .getElementById('rooted')
+      .getBoundingClientRect().bottom
+    const newProgress = (bottomPosition * 0.8 - windowHeight) / windowHeight
 
     let updateProgress
     if (newProgress < 1 && newProgress > 0) {
@@ -94,20 +96,43 @@ class Community extends Component {
           <div className="sec dance">
             <h2>Urban Dance Teams</h2>
             <a href="" target="_blank">
+              <img
+                className="youtube"
+                src="/images/youtube.svg"
+                alt="Youtube Logo"
+              />
               <p>The Piecemakers</p>
             </a>
             <a href="" target="_blank">
+              <img
+                className="youtube"
+                src="/images/youtube.svg"
+                alt="Youtube Logo"
+              />
               <p>Create InMotion Dance Family</p>
             </a>
           </div>
           <div className="sec canoe">
             <h2>Volunteer Canoe Guide</h2>
             <a href="" target="_blank">
-            <p>Friends of the Chicago River</p>
+              <img
+                className="youtube"
+                src="/images/canoe.svg"
+                alt="Canoe Logo"
+              />
+              <p>Friends of the Chicago River</p>
             </a>
           </div>
           <div className="sec streets">
             <h2>Safe Streets Advocate</h2>
+            <a href="" target="_blank">
+              <img
+                className="skateboard"
+                src="/images/skateboard.svg"
+                alt="Skateboard Logo"
+              />
+              <p>Bike Lane Uprising</p>
+            </a>
           </div>
         </section>
       </main>

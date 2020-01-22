@@ -5,6 +5,7 @@
   h2 {
     font-family: $tt-reg;
     font-size: 2rem;
+    margin-bottom: 1rem;
 
     @include media-breakpoint-up(md) {
       font-size: 4vw;
@@ -30,6 +31,8 @@
 
   a {
     color: white;
+    display: flex;
+    align-items: center;
   }
 
   .rooted {
@@ -78,14 +81,24 @@
   }
 
   .dance {
-    top: 45%;
+    top: 44%;
   }
 
   .canoe {
-    top: 67%;
+    top: 65%;
   }
 
   .streets {
-    top: 87%;
+    top: 85%;
+  }
+
+  .youtube {
+    height: 1.5rem;
+    margin-right: 10px;
+  }
+
+  .skateboard {
+    height: 2rem;
+    margin-right: 10px;
   }
 }
