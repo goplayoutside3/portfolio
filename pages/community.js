@@ -7,9 +7,7 @@ import { useEffect } from 'react'
 const Community = () => {
   const drawSkyline = () => {
     const tl = new TimelineLite()
-    tl.staggerFrom('.buildings', 5, { drawSVG: '0%' })
-      .staggerFrom('.tower-one', .5, { drawSVG: '0%' })
-      .staggerFrom('.tower-two', .5, { drawSVG: '0%' })
+    tl.from('.buildings', 5, { drawSVG: '60%', ease: 'power4.out' })
   }
 
   useEffect(() => {
@@ -19,8 +17,6 @@ const Community = () => {
   return (
     <main className="community">
       <section className="hero">
-        {/* <h1>Under Construction</h1> */}
-        {/* <img id="skyline" classNameName="skyline" src="/images/chicago.svg" alt="Chicago skyline" /> */}
         <svg
           version="1.1"
           className="skyline"
