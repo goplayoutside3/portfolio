@@ -1,75 +1,57 @@
 .community {
   background: $sky-blue;
-
-  .hero {
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-
-    h1 {
-      font-family: $solway;
-      font-size: 7vw;
-      color: white;
-      position: absolute;
-      transform: translateY(30%);
-
-      @include media-breakpoint-up(md) {
-          transform: translateY(70%);
-      }
-
-      @include media-breakpoint-up(lg) {
-        font-size: 4.5rem;
-      }
-    }
-  }
-
-  .skyline {
-    width: 90%;
-    transform: translateY(-40%);
-    
-    @include media-breakpoint-up(md) {
-        transform: translateY(-30%);
-    }
-
-    @include media-breakpoint-up(lg) {
-        width: 900px;
-    }
-  }
-
-}
-
-.skyline-path {
-  fill: none;
-  stroke: #ffffff;
-  stroke-width: 2;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-miterlimit: 10;
-}
-
-.rooted {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  color: white;
 
   h2 {
-    position: absolute;
-    color: white;
     font-family: $tt-reg;
   }
-}
 
-.scrolling-anim {
-  width: 70%;
-}
+  p {
+    font-family: $tt-light;
+  }
 
-.scrolling-path {
-  fill: none;
-  stroke: #ffffff;
-  stroke-width: 9;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-miterlimit: 10;
+  .rooted {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 10vw;
+  }
+
+  .scrolling-anim {
+    width: 100%;
+
+    @include media-breakpoint-up(xl) {
+      max-width: 1000px;
+    }
+  }
+
+  .svg-line {
+    fill: none;
+    stroke: #ffffff;
+    stroke-width: 5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+  }
+
+  h1 {
+    position: absolute;
+    top: 18%;
+    font-family: $solway;
+    font-size: 6.5vw;
+
+    @include media-breakpoint-up(md) {
+      top: calc(16% + 50px);
+    }
+
+    @include media-breakpoint-up(xl) {
+      font-size: 5rem;
+    }
+  }
+
+  .sec {
+    position: absolute;
+  }
 }
