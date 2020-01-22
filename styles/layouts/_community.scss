@@ -38,12 +38,38 @@
     }
   }
 
-  .skyline-path {
-    fill: none;
-    stroke: #ffffff;
-    stroke-width: 2;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    stroke-miterlimit: 10;
+}
+
+.skyline-path {
+  fill: none;
+  stroke: #ffffff;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 10;
+}
+
+.rooted {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  h2 {
+    position: absolute;
+    color: white;
+    font-family: $tt-reg;
   }
+}
+
+.scrolling-anim {
+  width: 70%;
+}
+
+.scrolling-path {
+  fill: none;
+  stroke: #ffffff;
+  stroke-width: 9;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 10;
 }

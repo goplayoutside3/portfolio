@@ -1,6 +1,8 @@
 import React from 'react'
 import { Draw } from '../components'
 import { useEffect } from 'react'
+import '../gsap/gsap.min.js'
+import DrawSVGPlugin from '../gsap/DrawSVGPlugin.min.js'
 
 // add dance, safe streets & water advocacy
 
@@ -18,7 +20,6 @@ const Community = () => {
     <main className="community">
       <section className="hero">
         <svg
-          version="1.1"
           className="skyline"
           xmlns="http://www.w3.org/2000/svg"
           x="0px"
@@ -49,11 +50,56 @@ const Community = () => {
             c2.2,0.6,3.7,2.4,3.6,5.3c-0.2,8.2-0.1,16.3-0.1,24.4c7.9,1.6,2.6,8.1,5.6,11.9c3.3,0,7.1,0,11.2,0c0,1.6,0,26.8,0,28.6
             c-17.4,0-35.8-0.1-52.9-0.1 M335.2,90.1 M140.8,106.6 M86.2,25.1"
           />
-          <path id="tower1" className="tower-one skyline-path" d="M85.3,26V3.2" />
-          <path id="tower2" className="tower-two skyline-path" d="M79.5,26V3.2" />
+          <path
+            id="tower1"
+            className="tower-one skyline-path"
+            d="M85.3,26V3.2"
+          />
+          <path
+            id="tower2"
+            className="tower-two skyline-path"
+            d="M79.5,26V3.2"
+          />
         </svg>
 
         <h1>Rooted in Chicago</h1>
+      </section>
+      <section className="rooted">
+        <svg
+          id="line"
+          className="scrolling-anim"
+          x="0px"
+          y="0px"
+          viewBox="0 0 1052 568"
+        >
+          <path className="left-curve scrolling-path" d="M0,568L0,0l1052,0 M0,568" />
+        </svg>
+
+        <h2>Urban Dance Team Captain</h2>
+      </section>
+      <section className="rooted">
+      <svg
+          id="line"
+          className="scrolling-anim"
+          x="0px"
+          y="0px"
+          viewBox="0 0 1052 568"
+        >
+          <path className="right-curve scrolling-path" d="M0,0h1052v568" />
+        </svg>
+        <h2>Volunteer Canoe Guide</h2>
+      </section>
+      <section className="rooted">
+      <svg
+          id="line"
+          className="scrolling-anim"
+          x="0px"
+          y="0px"
+          viewBox="0 0 1052 568"
+        >
+          <path className="left-curve scrolling-path" d="M1052,568H0L0,0l1052,0" />
+        </svg>
+        <h2>Safe Streets Advocate</h2>
       </section>
     </main>
   )
