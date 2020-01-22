@@ -95,7 +95,7 @@ class Community extends Component {
           <h1>Rooted in Chicago</h1>
           <div className="sec dance">
             <h2>Urban Dance Teams</h2>
-            <a href="" target="_blank">
+            <a href="https://www.youtube.com/watch?v=T1Rh9zFhhog" target="_blank">
               <img
                 className="youtube"
                 src="/images/youtube.svg"
@@ -103,7 +103,7 @@ class Community extends Component {
               />
               <p>The Piecemakers</p>
             </a>
-            <a href="" target="_blank">
+            <a href="https://www.youtube.com/watch?v=2MUcmDKKZBc" target="_blank">
               <img
                 className="youtube"
                 src="/images/youtube.svg"
@@ -114,7 +114,7 @@ class Community extends Component {
           </div>
           <div className="sec canoe">
             <h2>Volunteer Canoe Guide</h2>
-            <a href="" target="_blank">
+            <a href="https://www.chicagoriver.org/get-involved/attend/take-a-canoe-trip" target="_blank">
               <img
                 className="youtube"
                 src="/images/canoe.svg"
@@ -125,7 +125,7 @@ class Community extends Component {
           </div>
           <div className="sec streets">
             <h2>Safe Streets Advocate</h2>
-            <a href="" target="_blank">
+            <a href="https://www.bikelaneuprising.com/" target="_blank">
               <img
                 className="skateboard"
                 src="/images/skateboard.svg"
