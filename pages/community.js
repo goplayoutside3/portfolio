@@ -26,7 +26,7 @@ class Community extends Component {
     const drawTween = TweenMax.fromTo(
       '#curves',
       10,
-      { drawSVG: '100% 100%' },
+      { drawSVG: '100% 100%'},
       { drawSVG: '0% 100%' }
     )
     drawTween.pause()
@@ -36,13 +36,12 @@ class Community extends Component {
   handleScroll = () => {
     const windowHeight = window.innerHeight
     const bottomPosition = document.getElementById('rooted').getBoundingClientRect().bottom
-    const newProgress = (bottomPosition - windowHeight) / windowHeight
+    const newProgress = ((bottomPosition * 0.8) - windowHeight) / windowHeight
 
     let updateProgress
     if (newProgress < 1 && newProgress > 0) {
       updateProgress = 1 - newProgress
     }
-
     this.drawTween.progress(updateProgress)
   }
 
@@ -94,17 +93,20 @@ class Community extends Component {
           <h1>Rooted in Chicago</h1>
           <div className="sec dance">
             <h2>Urban Dance Teams</h2>
-            <a>
+            <a href="" target="_blank">
               <p>The Piecemakers</p>
             </a>
-            <a>
+            <a href="" target="_blank">
               <p>Create InMotion Dance Family</p>
             </a>
           </div>
-          <div className="sec">
+          <div className="sec canoe">
             <h2>Volunteer Canoe Guide</h2>
+            <a href="" target="_blank">
+            <p>Friends of the Chicago River</p>
+            </a>
           </div>
-          <div className="sec">
+          <div className="sec streets">
             <h2>Safe Streets Advocate</h2>
           </div>
         </section>
