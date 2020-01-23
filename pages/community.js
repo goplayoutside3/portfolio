@@ -47,7 +47,7 @@ class Community extends Component {
     const newProgress =
       (bottomPosition - windowHeight) / (scrollableHeight - windowHeight)
 
-    let updateProgress = 1 - newProgress
+    let updateProgress = (1 - newProgress) - 0.2
     this.drawTween.progress(updateProgress)
   }
 
