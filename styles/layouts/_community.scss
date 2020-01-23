@@ -4,8 +4,12 @@
 
   h2 {
     font-family: $tt-reg;
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin-bottom: 1rem;
+
+    @include media-breakpoint-up(sm) {
+      font-size: 2rem;
+    }
 
     @include media-breakpoint-up(md) {
       font-size: 4vw;
@@ -19,6 +23,7 @@
   p {
     font-family: $tt-light;
     font-size: 1rem;
+    white-space: nowrap;
 
     @include media-breakpoint-up(md) {
       font-size: 2vw;
@@ -33,6 +38,7 @@
     color: white;
     display: flex;
     align-items: center;
+    margin-top: 5px;
   }
 
   .rooted {
@@ -41,11 +47,20 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 50px 10vw;
+    padding: 100px 10vw 0 10vw;
+
+    @include media-breakpoint-up(sm) {
+      padding: 50px 10vw;
+    }
   }
 
   .scrolling-anim {
     width: 100%;
+    margin-bottom: 100px;
+
+    @include media-breakpoint-up(sm) {
+      margin-bottom: 0;
+    }
 
     @include media-breakpoint-up(xl) {
       max-width: 1000px;
@@ -61,11 +76,22 @@
     stroke-miterlimit: 10;
   }
 
+  #curves {
+    display: none;
+    @include media-breakpoint-up(sm) {
+      display: block;
+    }
+  }
+
   h1 {
     position: absolute;
-    top: 18%;
+    top: calc(19% + 50px);
     font-family: $solway;
     font-size: 6.5vw;
+
+    @include media-breakpoint-up(sm) {
+      top: 20%;
+    }
 
     @include media-breakpoint-up(md) {
       top: calc(16% + 50px);
@@ -77,19 +103,32 @@
   }
 
   .sec {
-    position: absolute;
+      position: absolute;
+      display: none;
+      @include media-breakpoint-up(sm) {
+        display: block;
+      }
   }
 
   .dance {
-    top: 44%;
+    top: 45%;
+    @include media-breakpoint-up(sm) {
+      top: 44%;
+    }
   }
 
   .canoe {
     top: 65%;
+    @include media-breakpoint-up(sm) {
+      top: 65%;
+    }
   }
 
   .streets {
     top: 85%;
+    @include media-breakpoint-up(sm) {
+      top: 85%;
+    }
   }
 
   .youtube {
@@ -100,5 +139,26 @@
   .skateboard {
     height: 2rem;
     margin-right: 10px;
+  }
+
+  .mobile-links {
+    position: absolute;
+    top: 40%;
+
+    @include media-breakpoint-up(sm) {
+      display: none;
+    }
+
+    .youtube {
+      height: 1rem;
+    }
+  
+    .skateboard {
+      height: 1.5rem;
+    }
+
+    h2 {
+      margin-top: 15%;
+    }
   }
 }

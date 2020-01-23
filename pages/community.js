@@ -9,12 +9,15 @@ class Community extends Component {
 
   componentDidMount() {
     this.drawSkyline()
-    this.drawCurves()
-    window.addEventListener('scroll', this.handleScroll)
+
+    if (!this.props.isMobile || this.props.isMobile === 'medium') {
+      this.drawCurves()
+      window.addEventListener('scroll', this.handleScroll)
+    }
   }
 
   componentWillUnmount() {
-    window.removeEventListener('scroll', this.handleScroll)
+      window.removeEventListener('scroll', this.handleScroll)
   }
 
   drawSkyline = () => {
@@ -38,12 +41,13 @@ class Community extends Component {
     const bottomPosition = document
       .getElementById('rooted')
       .getBoundingClientRect().bottom
-    const newProgress = (bottomPosition * 0.8 - windowHeight) / windowHeight
+    const scrollableHeight = document
+      .getElementById('rooted')
+      .getBoundingClientRect().height
+    const newProgress =
+      (bottomPosition - windowHeight) / (scrollableHeight - windowHeight)
 
-    let updateProgress
-    if (newProgress < 1 && newProgress > 0) {
-      updateProgress = 1 - newProgress
-    }
+    let updateProgress = 1 - newProgress
     this.drawTween.progress(updateProgress)
   }
 
@@ -56,6 +60,7 @@ class Community extends Component {
             x="0px"
             y="0px"
             viewBox="0 0 1333.9 2683.1"
+            preserveAspectRatio="none"
           >
             <path
               id="curves"
@@ -95,7 +100,10 @@ class Community extends Component {
           <h1>Rooted in Chicago</h1>
           <div className="sec dance">
             <h2>Urban Dance Teams</h2>
-            <a href="https://www.youtube.com/watch?v=T1Rh9zFhhog" target="_blank">
+            <a
+              href="https://www.youtube.com/watch?v=T1Rh9zFhhog"
+              target="_blank"
+            >
               <img
                 className="youtube"
                 src="/images/youtube.svg"
@@ -103,7 +111,10 @@ class Community extends Component {
               />
               <p>The Piecemakers</p>
             </a>
-            <a href="https://www.youtube.com/watch?v=2MUcmDKKZBc" target="_blank">
+            <a
+              href="https://www.youtube.com/watch?v=2MUcmDKKZBc"
+              target="_blank"
+            >
               <img
                 className="youtube"
                 src="/images/youtube.svg"
@@ -114,7 +125,10 @@ class Community extends Component {
           </div>
           <div className="sec canoe">
             <h2>Volunteer Canoe Guide</h2>
-            <a href="https://www.chicagoriver.org/get-involved/attend/take-a-canoe-trip" target="_blank">
+            <a
+              href="https://www.chicagoriver.org/get-involved/attend/take-a-canoe-trip"
+              target="_blank"
+            >
               <img
                 className="youtube"
                 src="/images/canoe.svg"
@@ -124,6 +138,52 @@ class Community extends Component {
             </a>
           </div>
           <div className="sec streets">
+            <h2>Safe Streets Advocate</h2>
+            <a href="https://www.bikelaneuprising.com/" target="_blank">
+              <img
+                className="skateboard"
+                src="/images/skateboard.svg"
+                alt="Skateboard Logo"
+              />
+              <p>Bike Lane Uprising</p>
+            </a>
+          </div>
+          <div className="mobile-links">
+            <h2>Urban Dance Teams</h2>
+            <a
+              href="https://www.youtube.com/watch?v=T1Rh9zFhhog"
+              target="_blank"
+            >
+              <img
+                className="youtube"
+                src="/images/youtube.svg"
+                alt="Youtube Logo"
+              />
+              <p>The Piecemakers</p>
+            </a>
+            <a
+              href="https://www.youtube.com/watch?v=2MUcmDKKZBc"
+              target="_blank"
+            >
+              <img
+                className="youtube"
+                src="/images/youtube.svg"
+                alt="Youtube Logo"
+              />
+              <p>Create InMotion Dance Family</p>
+            </a>
+            <h2>Volunteer Canoe Guide</h2>
+            <a
+              href="https://www.chicagoriver.org/get-involved/attend/take-a-canoe-trip"
+              target="_blank"
+            >
+              <img
+                className="youtube"
+                src="/images/canoe.svg"
+                alt="Canoe Logo"
+              />
+              <p>Friends of the Chicago River</p>
+            </a>
             <h2>Safe Streets Advocate</h2>
             <a href="https://www.bikelaneuprising.com/" target="_blank">
               <img
