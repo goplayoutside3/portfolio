@@ -2,7 +2,7 @@ import Navbar from './Navbar'
 import ErrorBoundary from './Error'
 import Head from 'next/head'
 
-const Layout = ({ children, title = 'Delilah Clement', description = '' }) => (
+const Layout = ({ children, title = 'Delilah Clement', description = 'Portfolio Website for Delilah Clement, a front-end web developer' }) => (
   <div>
     <Head>
       <title>{title}</title>
@@ -19,8 +19,8 @@ const Layout = ({ children, title = 'Delilah Clement', description = '' }) => (
 
       <meta property="og:title" content={title} />
       <meta property="og:type" content="article" />
-      <meta property="og:url" content={''} />
-      <meta property="og:image" content={''} />
+      <meta property="og:url" content={'https://delilahclement.dev/'} />
+      <meta property="og:image" content={'/images/share.jpg'} />
       <meta name="description" content={description} />
       <meta property="og:site_name" content={title} />
     </Head>
