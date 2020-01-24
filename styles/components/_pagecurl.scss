@@ -38,7 +38,13 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  box-shadow: -5px 5px 15px rgba(0, 0, 0, 0.5);
+
+  &.cover {
+    position: absolute;
+    top: 0;
+    background: rgba(0, 0, 0, 0.3);
+    box-shadow: inset 3px 3px 10px rgba(0, 0, 0, 0.5);
+  }
 }
 
 .page {
