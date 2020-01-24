@@ -1,18 +1,15 @@
 .community {
   background: $sky-blue;
   color: white;
+  padding: 10vw;
 
   h2 {
     font-family: $tt-reg;
     font-size: 1.5rem;
-    margin-bottom: 1rem;
-
-    @include media-breakpoint-up(sm) {
-      font-size: 2rem;
-    }
+    margin-bottom: 2%;
 
     @include media-breakpoint-up(md) {
-      font-size: 4vw;
+      font-size: 2rem;
     }
 
     @include media-breakpoint-up(xl) {
@@ -41,124 +38,85 @@
     margin-top: 5px;
   }
 
-  .rooted {
+  .skyline-cont {
     position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 100px 10vw 0 10vw;
-
-    @include media-breakpoint-up(sm) {
-      padding: 50px 10vw;
-    }
-  }
-
-  .scrolling-anim {
-    width: 100%;
-    margin-bottom: 100px;
-
-    @include media-breakpoint-up(sm) {
-      margin-bottom: 0;
-    }
-
-    @include media-breakpoint-up(xl) {
-      max-width: 1000px;
-    }
   }
 
   .svg-line {
     fill: none;
-    stroke: #ffffff;
-    stroke-width: 5;
+    stroke: white;
+    stroke-width: 2;
     stroke-linecap: round;
     stroke-linejoin: round;
     stroke-miterlimit: 10;
   }
 
-  #curves {
-    display: none;
-    @include media-breakpoint-up(sm) {
-      display: block;
-    }
-  }
-
-  h1 {
+  .chicago {
     position: absolute;
-    top: calc(19% + 50px);
     font-family: $solway;
-    font-size: 6.5vw;
+    top: 88%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 6vw;
+    white-space: nowrap;
+  }
 
-    @include media-breakpoint-up(sm) {
-      top: 20%;
-    }
+  section {
+    min-height: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
 
-    @include media-breakpoint-up(md) {
-      top: calc(16% + 50px);
-    }
-
-    @include media-breakpoint-up(xl) {
-      font-size: 5rem;
+    @media (min-width: 768px) {
+      height: 100vh;
     }
   }
 
-  .sec {
-      position: absolute;
-      display: none;
-      @include media-breakpoint-up(sm) {
-        display: block;
-      }
-  }
+  .right-border {
+    height: 102%;
+    width: 45px;
+    position: absolute;
+    right: 11.7%;
 
-  .dance {
-    top: 45%;
-    @include media-breakpoint-up(sm) {
-      top: 44%;
+    @media (min-width: 768px) {
+      width: 100px;
     }
   }
 
-  .canoe {
-    top: 65%;
-    @include media-breakpoint-up(sm) {
-      top: 65%;
-    }
-  }
-
-  .streets {
-    top: 85%;
-    @include media-breakpoint-up(sm) {
-      top: 85%;
-    }
+  .border-line {
+    fill: none;
+    stroke: white;
+    stroke-width: 1;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
   }
 
   .youtube {
-    height: 1.5rem;
+    height: 1rem;
     margin-right: 10px;
-  }
 
-  .skateboard {
-    height: 2rem;
-    margin-right: 10px;
-  }
-
-  .mobile-links {
-    position: absolute;
-    top: 40%;
-
-    @include media-breakpoint-up(sm) {
-      display: none;
-    }
-
-    .youtube {
-      height: 1rem;
-    }
-  
-    .skateboard {
+    @include media-breakpoint-up(md) {
       height: 1.5rem;
     }
 
-    h2 {
-      margin-top: 15%;
+    @include media-breakpoint-up(xl) {
+      height: 2rem;
+    }
+  }
+
+  .skateboard {
+    height: 1.5rem;
+    margin-right: 10px;
+
+    @include media-breakpoint-up(md) {
+      height: 2rem;
+    }
+
+    @include media-breakpoint-up(xl) {
+      height: 2.5rem;
     }
   }
 }
