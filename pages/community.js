@@ -11,7 +11,6 @@ class Community extends Component {
   componentDidMount() {
     this.drawSkyline()
     this.handleScroll()
-    this.drawOne.seek(0)
   }
 
   drawSkyline = () => {
@@ -55,7 +54,6 @@ class Community extends Component {
       .addTo(controller)
       .on('progress', event => {
         this.handleFirstSroll(event)
-        // this.drawOne.progress(roundOff(event.progress))
       })
 
     const sectionTwoScene = new ScrollMagic.Scene({
