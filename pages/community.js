@@ -3,9 +3,15 @@ import '../gsap/gsap.min.js'
 import DrawSVGPlugin from '../gsap/DrawSVGPlugin.min.js'
 
 class Community extends Component {
+  constructor(props) {
+    super(props)
+    this.state = { scrolled: false}
+  }
+
   componentDidMount() {
     this.drawSkyline()
     this.handleScroll()
+    this.drawOne.seek(0)
   }
 
   drawSkyline = () => {
@@ -33,12 +39,12 @@ class Community extends Component {
     )
     this.drawThree = drawThree
   }
+  
+  roundOff = progress => Math.round(progress * 100) / 100
 
   handleScroll = () => {
     const ScrollMagic = require('scrollmagic')
     const controller = new ScrollMagic.Controller()
-
-    const roundOff = progress => Math.round(progress * 100) / 100
 
     const sectionOneScene = new ScrollMagic.Scene({
       duration: '100%',
@@ -48,7 +54,8 @@ class Community extends Component {
     })
       .addTo(controller)
       .on('progress', event => {
-        this.drawOne.progress(roundOff(event.progress))
+        this.handleFirstSroll(event)
+        // this.drawOne.progress(roundOff(event.progress))
       })
 
     const sectionTwoScene = new ScrollMagic.Scene({
@@ -59,7 +66,7 @@ class Community extends Component {
     })
       .addTo(controller)
       .on('progress', event => {
-        this.drawTwo.progress(roundOff(event.progress))
+        this.drawTwo.progress(this.roundOff(event.progress))
       })
 
     const sectionThreeScene = new ScrollMagic.Scene({
@@ -70,8 +77,13 @@ class Community extends Component {
     })
       .addTo(controller)
       .on('progress', event => {
-        this.drawThree.progress(roundOff(event.progress))
+        this.drawThree.progress(this.roundOff(event.progress))
       })
+  }
+
+  handleFirstSroll = (event) => {
+    if (window.scrollY < 20) return
+    else this.drawOne.progress(this.roundOff(event.progress))
   }
 
   render() {
