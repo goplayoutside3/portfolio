@@ -23,7 +23,7 @@ const Toolbox = () => {
         <div className="col-sm-4 col-lg-3 col-12 list">
           <img
             className="tool"
-            src="/images/toolbox.svg"
+            src="/images/toolbox2.svg"
             alt="Image of a toolbox"
           />
         </div>
