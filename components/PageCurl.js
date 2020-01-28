@@ -64,7 +64,7 @@ const PageCurl = ({ image = '', z = '1', title = '', site = '', isMobile }) => {
           className="thumbnail"
           style={{ backgroundImage: `url(${image})` }}
         />
-        <div className="thumbnail cover"/>
+        {/* <div className="thumbnail cover"/> */}
         <svg
           id="closed-page-paths"
           className="page"

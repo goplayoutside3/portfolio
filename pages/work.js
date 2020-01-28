@@ -14,21 +14,21 @@ const Work = ({ isMobile }) => (
       </p>
       <div className="row">
         <PageCurl
-          image="/images/northface.jpg"
+          image="/images/northface2.jpg"
           z="4"
           title="Rewind Nature"
           site="https://www.nationalgeographic.com/rewindnature/"
           isMobile={isMobile}
         />
         <PageCurl
-          image="/images/mazda.jpg"
+          image="/images/mazda2.jpg"
           z="3"
           title="Inspiration in Every Mile"
           site="https://www.nationalgeographic.com/mazda/"
           isMobile={isMobile}
         />
         <PageCurl
-          image="/images/maine.jpg"
+          image="/images/maine2.jpg"
           z="2"
           title="What's In Your Pack?"
           site="https://www.nationalgeographic.com/whatsinyourpack/"
