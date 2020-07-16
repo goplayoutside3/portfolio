@@ -1,18 +1,24 @@
-const withSass = require('@zeit/next-sass')
-
-module.exports = withSass({
-    target: 'serverless',
-    webpack(config, options) {
-      config.module.rules.push({
-        test: /\.(png|jpg|gif|svg|eot|ttf|woff|woff2)$/,
-        use: {
-          loader: 'url-loader',
-          options: {
-            limit: 100000
-          }
-        }
-      })
-  
-      return config
-    }
-  })
+module.exports = {
+  target: 'serverless',
+  webpack(config) {
+    config.module.rules.push( 
+      {
+        test: /\.module\.(sa|sc|c)ss$/,
+        use: [
+          'sass-loader',
+          {
+            loader: 'sass-resources-loader',
+            options: {
+              resources: [
+                './src/styles/common/_typography.scss',
+                './src/styles/common/_variables.scss',
+                './src/styles/common/_mixins.scss',
+              ],
+            },
+          },
+        ],
+      }
+    );
+    return config;
+  },
+};

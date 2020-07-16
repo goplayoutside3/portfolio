@@ -25,7 +25,7 @@ const Layout = ({ children, title = 'Delilah Clement', description = 'Portfolio 
       <meta property="og:site_name" content={title} />
     </Head>
 
-      <Navbar />
+      {/* <Navbar /> */}
     <ErrorBoundary>
       {children}
       <footer>© 2020 Delilah Clement. All rights reserved.</footer>
