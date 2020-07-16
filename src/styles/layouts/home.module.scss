@@ -1,4 +1,6 @@
 #home {
+    background-color: $sky-blue;
+
     .hero {
         text-align: center;
         position: relative;
@@ -35,5 +37,18 @@
     .hero-copy {
         position: relative;
         padding-top: $section-padding;
+    }
+
+    .work {
+        background-color: $sky-blue;
+
+        .projects-cont {
+            display: flex;
+            flex-direction: column;
+
+            @include media-breakpoint-up(sm) {
+                flex-direction: row;
+            }
+        }
     }
 }

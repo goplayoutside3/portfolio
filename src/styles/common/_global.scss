@@ -46,6 +46,17 @@ body {
 
 section {
 	padding: $section-padding;
+
+	@include media-breakpoint-up(xl) {
+		padding: 80px;
+	}
+}
+
+.container {
+	width: 100%;
+	max-width: 1300px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 h1, .h2, .h3, .h4 {
