@@ -4,13 +4,11 @@
         position: relative;
         background: $sky-blue;
         overflow: hidden;
-        width: 100%;
         transition: height 300ms ease-out;
     }
 
     .hero-bg-desktop {
         position: absolute;
-        bottom: 0;
         left: -2px;
         right: -2px;
         bottom: -2px;
@@ -24,7 +22,6 @@
 
     .hero-bg-mobile {
         position: absolute;
-        bottom: 0;
         left: -2px;
         right: -2px;
         bottom: -2px;
@@ -37,59 +34,6 @@
 
     .hero-copy {
         position: relative;
-        top: 25%;
-        font-family: $solway;
-        color: white;
-
-        @include media-breakpoint-up(sm) {
-            top: 18%;
-        }
-
-        h1 {
-            font-size: 3rem;
-        }
-        
-        p {
-            font-size: 1.5rem;
-            line-height: 1;
-
-            @include media-breakpoint-up(md) {
-                font-size: 2rem;
-            }
-        }
-    }
-
-    .introduction {
-        padding: 5vw;
-        width: 100%;
-        background: $sky-blue;
-        display: flex;
-        align-items: center;
-
-        @include media-breakpoint-up(sm) {
-            padding: 5vw 20vw;
-        }
-
-        p {
-            color: white;
-            margin: auto;
-            font-size: 1rem;
-            line-height: 1.2;
-            font-family: $tt-light;
-            text-align: center;
-
-            @include media-breakpoint-up(md) {
-                font-size: 2.2vw;
-            }
-        }
-
-        a {
-            color: white;
-            font-family: $tt-bold;
-
-            &:hover {
-                color: white;
-            }
-        }
+        padding-top: $section-padding;
     }
 }
