@@ -22,7 +22,7 @@ export default ({ isMobile }) => {
       <section className={classes(styles.work, 'container')}>
         <h2 className="h2">Professional Work</h2>
         <p className="h4">
-          Select projects built as lead developer at{' '}
+          Select projects built as primary developer at{' '}
           <a href="https://www.reachcreative.com/" target="_blank">
             Reach Creative
           </a>
@@ -51,6 +51,22 @@ export default ({ isMobile }) => {
             isMobile={isMobile}
           />
         </div>
+      </section>
+      <div className={classes("hero", styles['north-skyline'])}/>
+      <section className={classes("container", styles.toolbox)}>
+        <h2 className="h2">My Toolbox</h2>
+        <ul>
+          <li>Javascript</li>
+          <li>React</li>
+          <li>React Native</li>
+          <li>CSS Animations</li>
+          <li>Three.js</li>
+          <li>GSAP</li>
+          <li>Firebase</li>
+          <li>Prismic</li>
+          <li>Adobe Illustrator</li>
+          <li>Adobe Photoshop</li>
+        </ul>
       </section>
     </main>
   )
