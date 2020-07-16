@@ -50,10 +50,10 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: -5px 0 10px rgba(0, 0, 0, 0.3);
 
   @include media-breakpoint-up(sm) {
-    box-shadow: -5px 5px 15px rgba(0, 0, 0, 0.4);
+    box-shadow: -5px 0 10px rgba(0, 0, 0, 0.4);
     width: 90%;
   }
 }

@@ -8,7 +8,7 @@ export default ({ isMobile }) => {
       <section className={classes(styles.hero, 'hero')}>
         <div className={styles['hero-copy']}>
           <h1>I'm Delilah</h1>
-          <h2 className="h2">a front-end web developer</h2>
+          <h2 className="h3">a front-end web developer</h2>
         </div>
       </section>
       <section className={classes(styles.work, 'container')}>
@@ -44,22 +44,26 @@ export default ({ isMobile }) => {
           />
         </div>
       </section>
-      <div className={classes("hero", styles['north-skyline'])}/>
-      <section className={classes("container", styles.toolbox)}>
+      <section className={classes('container', styles.toolbox)}>
         <h2 className="h2">My Toolbox</h2>
-        <ul>
-          <li>Javascript</li>
-          <li>React</li>
-          <li>React Native</li>
-          <li>CSS Animations</li>
-          <li>Three.js</li>
-          <li>GSAP</li>
-          <li>Firebase</li>
-          <li>Prismic</li>
-          <li>Adobe Illustrator</li>
-          <li>Adobe Photoshop</li>
-        </ul>
+        <div className={styles['tools-cont']}>
+          <ul>
+            <li>Javascript</li>
+            <li>React</li>
+            <li>React Native</li>
+            <li>CSS Animations</li>
+            <li>Three.js</li>
+          </ul>
+          <ul>
+            <li>GSAP</li>
+            <li>Firebase</li>
+            <li>Prismic</li>
+            <li>Adobe Illustrator</li>
+            <li>Adobe Photoshop</li>
+          </ul>
+        </div>
       </section>
+      <div className={classes('hero', styles['north-skyline'])} />
     </main>
   )
 }

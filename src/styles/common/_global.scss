@@ -8,7 +8,6 @@
 body {
 	margin: 0;
 	padding: 0;
-	letter-spacing: 1px;
 	font-size: 16px;
 	color: $white;
 }
@@ -62,30 +61,34 @@ section {
 h1, .h2, .h3, .h4 {
 	margin-bottom: $copy-margin-bottom;
 	line-height: 1;
+	font-family: $tt-reg;
+	letter-spacing: 1px;
 }
 
 h1 {
-	font-size: 3rem;
-	font-family: $solway;
+	font-size: 4rem;
 }
 
 .h2 {
-	font-size: 2rem;
-	font-family: $solway;
+	font-size: 3rem;
 }
 
 .h3 {
-	font-size: 1.5rem;
+	font-size: 2rem;
 }
 
 .h4 {
-	font-size: 1.25rem;
+	font-size: 1.5rem;
+}
+
+p, li {
+	font-family: $tt-reg;
+	font-size: 1rem;
+	line-height: 1.5;
 }
 
 p {
-	font-family: $tt-light;
-	font-size: 1rem;
-	line-height: 1.5;
+	margin-bottom: $copy-margin-bottom;
 }
 
 a {
@@ -93,4 +96,9 @@ a {
 	font-family: $tt-bold;
 	color: $white;
 	text-decoration: none;
+	transition: color $text-color-transition;
+
+	&:hover {
+		color: $light-blue;
+	}
 }

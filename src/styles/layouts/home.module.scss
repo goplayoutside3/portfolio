@@ -49,4 +49,29 @@
         background-position: top;
         background-repeat: no-repeat;
     }
+
+    .toolbox {
+        .tools-cont {
+            display: flex;
+            flex-direction: column;
+
+            @include media-breakpoint-up(sm) {
+                flex-direction: row;
+            }
+        }
+
+        ul {
+            list-style: none;
+
+            @include media-breakpoint-up(sm) {
+                &:not(:first-of-type) {
+                    margin-left: $section-padding;
+                }
+            }
+        }
+
+        li {
+            font-size: 1.5rem;
+        }
+    }
 }
