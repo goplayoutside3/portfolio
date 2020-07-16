@@ -7,30 +7,13 @@
         background: $sky-blue;
         overflow: hidden;
         transition: height 300ms ease-out;
-    }
-
-    .hero-bg-desktop {
-        position: absolute;
-        left: -2px;
-        right: -2px;
-        bottom: -2px;
-        width: 101%;
-        display: none;
+        background-image: url('/images/home-hero-mobile.svg');
+        background-size: cover;
+        background-position: top;
+        background-repeat: no-repeat;
 
         @include media-breakpoint-up(md) {
-            display: block;
-        }
-    }
-
-    .hero-bg-mobile {
-        position: absolute;
-        left: -2px;
-        right: -2px;
-        bottom: -2px;
-        width: 105%;
-
-        @include media-breakpoint-up(md) {
-            display: none;
+            background-image: url('/images/home-hero-desktop.svg');
         }
     }
 
@@ -63,7 +46,7 @@
     .north-skyline {
         background-image: url('/images/north-skyline.svg');
         background-size: cover;
-        background-position: center;
+        background-position: top;
         background-repeat: no-repeat;
     }
 }
