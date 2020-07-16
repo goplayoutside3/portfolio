@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import styles from '../styles/components/navbar.module.scss'
 
-const Navbar = () => (
+export default () => (
   <header>
     <nav>
     <li>
@@ -26,5 +26,3 @@ const Navbar = () => (
     </nav>
   </header>
 )
-
-export default Navbar
