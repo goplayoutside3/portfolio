@@ -47,14 +47,13 @@
   left: 0;
   width: 85%;
   height: 100%;
-  background-position: center;
+  background-position: left center;
   background-size: cover;
   background-repeat: no-repeat;
-  box-shadow: -5px 0 10px rgba(0, 0, 0, 0.3);
+  box-shadow: -5px 5px 0 rgba(0, 0, 0, 0.3);
 
   @include media-breakpoint-up(sm) {
-    box-shadow: -5px 0 10px rgba(0, 0, 0, 0.4);
-    width: 90%;
+    width: 100%; // might need more breakpoints here
   }
 }
 

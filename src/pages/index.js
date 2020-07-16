@@ -22,24 +22,21 @@ export default ({ isMobile }) => {
         </p>
         <div className={styles['projects-cont']}>
           <PageCurl
-            image="/images/northface2.jpg"
+            image="/images/globe.jpg"
             z="4"
-            title="Rewind Nature"
-            site="https://www.nationalgeographic.com/rewindnature/"
+            site="https://www.nationalgeographic.com/partner-content-dow-closing-the-loop/"
             isMobile={isMobile}
           />
           <PageCurl
-            image="/images/mazda2.jpg"
+            image="/images/reimagine.jpg"
             z="3"
-            title="Inspiration in Every Mile"
-            site="https://www.nationalgeographic.com/mazda/"
+            site="https://www.reimaginegender.org/"
             isMobile={isMobile}
           />
           <PageCurl
-            image="/images/maine2.jpg"
+            image="/images/northface.jpg"
             z="2"
-            title="What's In Your Pack?"
-            site="https://www.nationalgeographic.com/whatsinyourpack/"
+            site="https://www.nationalgeographic.com/rewindnature/"
             isMobile={isMobile}
           />
         </div>
