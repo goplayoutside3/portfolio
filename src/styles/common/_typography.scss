@@ -1,4 +1,9 @@
 @font-face {
+  font-family: 'Titillium-Light';
+  src: url('/fonts/Titillium-Light.ttf') format('truetype');
+}
+
+@font-face {
   font-family: 'Titillium-Regular';
   src: url('/fonts/Titillium-Regular.woff') format('woff'),
     url('/fonts/Titillium-Regular.ttf') format('truetype');
@@ -10,5 +15,6 @@
     url('/fonts/Titillium-SemiBold.ttf') format('truetype');
 }
 
+$tt-light: 'Titillium-Light', sans-serif;
 $tt-reg: 'Titillium-Regular', sans-serif;
 $tt-bold: 'Titillium-SemiBold', sans-serif;
