@@ -1,4 +1,3 @@
-import React from 'react'
 import Link from 'next/link'
 
 const Navbar = () => (
@@ -12,11 +11,6 @@ const Navbar = () => (
     <li>
       <Link href="/work">
         <a>Work</a>
-      </Link>
-    </li>
-    <li>
-      <Link href="/community">
-        <a>Community</a>
       </Link>
     </li>
     <li>
