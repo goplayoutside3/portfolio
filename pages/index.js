@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import styles from '../styles/layouts/home.module.scss'
 
 const Homepage = () => {
   return (

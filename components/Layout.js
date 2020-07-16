@@ -1,4 +1,5 @@
 import Navbar from './Navbar'
+import Footer from './Footer'
 import ErrorBoundary from './Error'
 import Head from 'next/head'
 
@@ -28,7 +29,8 @@ const Layout = ({ children, title = 'Delilah Clement', description = 'Portfolio 
       {/* <Navbar /> */}
     <ErrorBoundary>
       {children}
-      <footer>© 2020 Delilah Clement. All rights reserved.</footer>
+      <Footer />
+      {/* <footer>© 2020 Delilah Clement. All rights reserved.</footer> */}
     </ErrorBoundary>
   </div>
 )
