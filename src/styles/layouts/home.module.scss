@@ -19,11 +19,7 @@
 
     .hero-copy {
         position: relative;
-        padding-top: $section-padding / 2;
-
-        @include media-breakpoint-up(md) {
-            padding-top: $section-padding;
-        }
+        padding-top: 3vw;
 
         @include media-breakpoint-up(xl) {
             padding-top: 3vw;
@@ -40,6 +36,10 @@
             @include media-breakpoint-up(sm) {
                 flex-direction: row;
             }
+        }
+
+        .work-desc {
+            line-height: 1.5;
         }
     }
 
@@ -71,7 +71,11 @@
         }
 
         li {
-            font-size: 1.5rem;
+            font-size: 1.2rem;
+
+            @include media-breakpoint-up(md) {
+                font-size: 1.5rem;
+            }
         }
     }
 }

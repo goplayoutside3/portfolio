@@ -13,7 +13,7 @@ export default ({ isMobile }) => {
       </section>
       <section className={classes(styles.work, 'container')}>
         <h2 className="h2">Professional Work</h2>
-        <p className="h4">
+        <p className={classes("h4", styles['work-desc'])}>
           Select projects built as primary developer at{' '}
           <a href="https://www.reachcreative.com/" target="_blank">
             Reach Creative
@@ -53,10 +53,15 @@ export default ({ isMobile }) => {
           </ul>
           <ul>
             <li>GSAP</li>
-            <li>Firebase</li>
-            <li>Prismic</li>
+            <li>Next.js</li>
+            <li>Headless CMS</li>
             <li>Adobe Illustrator</li>
             <li>Adobe Photoshop</li>
+          </ul>
+          <ul>
+            <li>Git Workflow</li>
+            <li>Firebase</li>
+            <li>Express</li>
           </ul>
         </div>
       </section>
