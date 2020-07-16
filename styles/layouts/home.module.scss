@@ -1,4 +1,4 @@
-.home {
+#home {
     .hero {
         text-align: center;
         position: relative;
@@ -8,28 +8,30 @@
         transition: height 300ms ease-out;
     }
 
-    .hero-bg {
+    .hero-bg-desktop {
         position: absolute;
         bottom: 0;
         left: -2px;
         right: -2px;
         bottom: -2px;
+        width: 101%;
+        display: none;
 
-        &.desktop {
-            display: none;
-            width: 101%;
-
-            @include media-breakpoint-up(md) {
-                display: block;
-            }
+        @include media-breakpoint-up(md) {
+            display: block;
         }
+    }
 
-        &.mobile {
-            width: 105%;
+    .hero-bg-mobile {
+        position: absolute;
+        bottom: 0;
+        left: -2px;
+        right: -2px;
+        bottom: -2px;
+        width: 105%;
 
-            @include media-breakpoint-up(md) {
-                display: none;
-            }
+        @include media-breakpoint-up(md) {
+            display: none;
         }
     }
 
