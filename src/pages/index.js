@@ -7,7 +7,7 @@ export default ({ isMobile }) => {
     <main id={styles.home}>
       <section className={classes(styles.hero, 'hero')}>
         <div className={styles['hero-copy']}>
-          <h1>I'm Delilah</h1>
+          <h1>I&apos;m Delilah</h1>
           <h2 className="h3">a front-end web developer</h2>
         </div>
       </section>

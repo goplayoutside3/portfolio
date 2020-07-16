@@ -1,7 +1,8 @@
 * {
-	-webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-	box-sizing: border-box;
+  font-smoothing: antialiased;
 	text-rendering: optimizeLegibility;
 }
 
@@ -9,6 +10,7 @@ body {
 	margin: 0;
 	padding: 0;
 	font-size: 16px;
+	font-family: $tt-reg;
 	color: $white;
 }
 
@@ -98,7 +100,6 @@ h1 {
 }
 
 p, li {
-	font-family: $tt-reg;
 	font-size: 1rem;
 	line-height: 1.5;
 }
