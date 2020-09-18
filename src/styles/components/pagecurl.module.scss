@@ -53,11 +53,7 @@
   box-shadow: -5px 5px 0 rgba(0, 0, 0, 0.3);
 
   @include media-breakpoint-up(sm) {
-    width: 95%;
-  }
-
-  @include media-breakpoint-up(xl) {
-    width: 100%;
+    width: 93%;
   }
 }
 
