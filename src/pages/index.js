@@ -2,7 +2,7 @@ import styles from '../styles/layouts/home.module.scss'
 import classes from 'classnames'
 import { PageCurl } from '../components'
 
-export default ({ isMobile }) => {
+const Homepage = ({ isMobile }) => {
   return (
     <main id={styles.home}>
       <section className={classes(styles.hero, 'hero')}>
@@ -69,3 +69,5 @@ export default ({ isMobile }) => {
     </main>
   )
 }
+
+export default Homepage
