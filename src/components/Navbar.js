@@ -1,6 +1,6 @@
 import styles from '../styles/components/navbar.module.scss'
 
-export default () => (
+const Navbar = () => (
   <header>
     <nav className={styles.navbar}>
         <a
@@ -13,3 +13,5 @@ export default () => (
     </nav>
   </header>
 )
+
+export default Navbar
