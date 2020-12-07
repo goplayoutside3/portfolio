@@ -1,6 +1,6 @@
 import Footer from './Footer'
-import ErrorBoundary from './Error'
 import Head from 'next/head'
+import Navbar from '/Navbar'
 
 const Layout = ({ children, title = 'Delilah Clement', description = 'Portfolio Website for Delilah Clement, a front-end web developer' }) => (
   <div>
@@ -25,10 +25,9 @@ const Layout = ({ children, title = 'Delilah Clement', description = 'Portfolio 
       <meta property="og:site_name" content={title} />
     </Head>
 
-    <ErrorBoundary>
+      <Navbar/>
       {children}
       <Footer />
-    </ErrorBoundary>
   </div>
 )
 
