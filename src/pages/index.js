@@ -5,7 +5,7 @@ import { PageCurl } from '../components'
 const Homepage = ({ isMobile }) => {
   return (
     <main id={styles.home}>
-      <section className={classes(styles.hero, 'hero')}>
+      <section className={classes(styles.hero)}>
         <div className={styles['hero-copy']}>
           <h1>I&apos;m Delilah</h1>
           <h2 className="h3">a front-end web developer</h2>
@@ -59,13 +59,14 @@ const Homepage = ({ isMobile }) => {
             <li>Adobe Photoshop</li>
           </ul>
           <ul>
+            <li>REST APIs</li>
             <li>Git Workflow</li>
             <li>Firebase</li>
-            <li>Express</li>
+            <li>Express.js</li>
           </ul>
         </div>
       </section>
-      <div className={classes('hero', styles['north-skyline'])} />
+      <div className={classes(styles.hero, styles['north-skyline'])} />
     </main>
   )
 }
