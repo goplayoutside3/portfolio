@@ -11,15 +11,26 @@
         background-size: cover;
         background-position: top;
         background-repeat: no-repeat;
+        width: 100%;
+        height: 650px;
+
+        @include media-breakpoint-up(sm) {
+            height: 800px;
+        }
 
         @include media-breakpoint-up(md) {
             background-image: url('/images/home-hero-desktop.svg');
+            height: 100vh;
         }
     }
 
     .hero-copy {
         position: relative;
         padding-top: 3vw;
+
+        @include media-breakpoint-up(md) {
+            padding-top: 2vw;
+        }
 
         @include media-breakpoint-up(xl) {
             padding-top: 3vw;
