@@ -2,7 +2,7 @@ import Footer from './Footer'
 import Head from 'next/head'
 import Navbar from './Navbar'
 
-const Layout = ({ children, title = 'Delilah Clement', description = 'Portfolio Website for Delilah Clement, a front-end web developer' }) => (
+const Layout = ({ children, title = 'Delilah Clement', description = 'Portfolio Website for Delilah Clement, a fullstack web developer' }) => (
   <div>
     <Head>
       <title>{title}</title>

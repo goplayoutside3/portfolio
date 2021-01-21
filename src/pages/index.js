@@ -8,7 +8,7 @@ const Homepage = ({ isMobile }) => {
       <section className={classes(styles.hero)}>
         <div className={styles['hero-copy']}>
           <h1>I&apos;m Delilah</h1>
-          <h2 className="h3">a front-end web developer</h2>
+          <h2 className="h3">a fullstack web developer</h2>
         </div>
       </section>
       <section className={classes(styles.work, 'container')}>
