@@ -12,7 +12,7 @@ const Homepage = ({ isMobile }) => {
         </div>
       </section>
       <section className={classes(styles.work, 'container')}>
-        <h2 className="h2">Professional Work</h2>
+        <h2 className={classes(styles['professional-work'], 'h2')}>Professional Work</h2>
         <div className={styles['projects-cont']}>
           <PageCurl
             image="/images/globe.jpg"
@@ -27,9 +27,9 @@ const Homepage = ({ isMobile }) => {
             isMobile={isMobile}
           />
           <PageCurl
-            image="/images/northface.jpg"
+            image="/images/zooniverse.jpg"
             z="2"
-            site="https://www.nationalgeographic.com/rewindnature/"
+            site="https://www.zooniverse.org/"
             isMobile={isMobile}
           />
         </div>

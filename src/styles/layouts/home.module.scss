@@ -40,6 +40,10 @@
     .work {
         background-color: $sky-blue;
 
+        .professional-work {
+            margin-bottom: calc(#{$copy-margin-bottom} + 5px);
+        }
+
         .projects-cont {
             display: flex;
             flex-direction: column;
